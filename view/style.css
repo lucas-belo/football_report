@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border-top: 5px solid #007BFF;
+}
+
+.team-tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #007BFF;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.team-logo {
+    max-width: 100px; /* Ajuste o tamanho máximo da imagem conforme necessário */
+    margin-right: 20px; /* Espaço entre o escudo e o nome */
+}
+
+.team-name {
+    flex-grow: 1; /* Permite que o nome do time ocupe o espaço restante */
+    text-align: left; /* Centraliza o nome horizontalmente */
+}
+
+.data-list li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.5; /* Adicione esta linha para ajustar o espaço entre as linhas */
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.data-list {
+    list-style: none;
+    padding: 0;
+}
+
+.data-list li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.divider {
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+p {
+    color: #555;
+    font-size: 20px;
+}
+
+.highlight {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
