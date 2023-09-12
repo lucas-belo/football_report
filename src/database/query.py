@@ -1,7 +1,7 @@
 from connection import mongodb_connection
 
 
-def get_document(database_name, collection_name, nome=None):
+def get_document(database_name, collection_name, nome):
     try:
         client = mongodb_connection()
         if client:
@@ -9,7 +9,9 @@ def get_document(database_name, collection_name, nome=None):
             collection = db[collection_name]
             print("Connected to the database")
 
-            query_criteria = {"nome": nome} if nome else {}
+            query_criteria = {
+                "nome": nome
+            } if nome else {}
 
             document = collection.find_one(query_criteria)
 
@@ -17,7 +19,7 @@ def get_document(database_name, collection_name, nome=None):
                 print(document)
                 return document
             else:
-                print("Documento não encontrado.")
+                print("Document not found.")
                 return None
         else:
             print("Failed to connect to the database.")
@@ -25,6 +27,3 @@ def get_document(database_name, collection_name, nome=None):
     except Exception as e:
         print(e)
         return None
-
-
-get_document("brazil_teams", "serie_a", "Corinthians")
