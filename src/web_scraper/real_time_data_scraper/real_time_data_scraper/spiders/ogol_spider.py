@@ -38,33 +38,59 @@ class OgolSpiderSpider(scrapy.Spider):
             }
             matches_data.append(stat)
 
-            # Competitions
+        # Competitions
 
-            official_competitions_div = response.xpath('//div[@class="section" and text()="Competições Oficiais"]')
+        official_competitions_div = response.xpath('//div[@class="section" and text()="Competições Oficiais"]')
 
-            competition_data = []
+        competition_data = []
 
-            if official_competitions_div:
-                season_divs = official_competitions_div.xpath('//*[@id="page_rightbar"]/div[1]/div[2]/div[2]/div')
+        if official_competitions_div:
+            season_divs = official_competitions_div.xpath('//*[@id="page_rightbar"]/div[1]/div[2]/div[2]/div')
 
-                for season_div in season_divs:
-                    competition_text = season_div.xpath(
-                        './/div[@class="competition"]//div[@class="text"]/a/text()'
-                    ).get()
+            for season_div in season_divs:
+                competition_text = season_div.xpath(
+                    './/div[@class="competition"]//div[@class="text"]/a/text()'
+                ).get()
 
-                    number_class = season_div.xpath(
-                        './/div[contains(@class, "number")]/text()'
-                    ).get()
+                number_class = season_div.xpath(
+                    './/div[contains(@class, "number")]/text()'
+                ).get()
 
-                    stat = {
-                        "competition": competition_text,
-                        "Position": number_class
-                    }
+                stat = {
+                    "competition": competition_text,
+                    "Position": number_class
+                }
 
-                    competition_data.append(stat)
+                competition_data.append(stat)
+
+        # Previous and next games
+
+        table_rows = response.xpath('//div[@id="team_games"]/table/tbody/tr')
+
+        current_matches_data = []
+
+        for index, row in enumerate(table_rows):
+            date = row.xpath('.//td[2]/text()').get()
+            hour = row.xpath('.//td[3]/text()').get()
+            league = row.xpath('.//td[4]/div/div[2]/a/text()').get()
+            home_team = row.xpath('.//td[5]/a/text()').get()
+            score_vs = row.xpath('.//td[6]/a/text()').get()
+            away_team = row.xpath('.//td[7]/a/text()').get()
+
+            stat = {
+                "date": date,
+                "hour": hour,
+                "league": league,
+                "home_team": home_team,
+                "score_vs": score_vs,
+                "away_team": away_team
+            }
+
+            current_matches_data.append(stat)
 
         yield {
             "season_year": season_year,
             "season_matches_data": matches_data,
-            "competition_data": competition_data
+            "competition_data": competition_data,
+            "current_matches_data": current_matches_data
         }
