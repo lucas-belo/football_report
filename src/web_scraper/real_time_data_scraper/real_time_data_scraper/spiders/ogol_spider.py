@@ -10,7 +10,9 @@ class OgolSpiderSpider(scrapy.Spider):
 
     def parse(self, response):
         season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/div[1]/text()').get()
-        season_summary = response.xpath('//*[@id="page_main"]/div[1]/h2/text()').get()
+
+        # Season summary
+
         table_rows = response.xpath('//div[@id="entity_season"]/table/tbody/tr')
 
         matches_data = []
@@ -36,8 +38,33 @@ class OgolSpiderSpider(scrapy.Spider):
             }
             matches_data.append(stat)
 
+            # Competitions
+
+            official_competitions_div = response.xpath('//div[@class="section" and text()="Competições Oficiais"]')
+
+            competition_data = []
+
+            if official_competitions_div:
+                season_divs = official_competitions_div.xpath('//*[@id="page_rightbar"]/div[1]/div[2]/div[2]/div')
+
+                for season_div in season_divs:
+                    competition_text = season_div.xpath(
+                        './/div[@class="competition"]//div[@class="text"]/a/text()'
+                    ).get()
+
+                    number_class = season_div.xpath(
+                        './/div[contains(@class, "number")]/text()'
+                    ).get()
+
+                    stat = {
+                        "competition": competition_text,
+                        "Position": number_class
+                    }
+
+                    competition_data.append(stat)
+
         yield {
             "season_year": season_year,
-            "season_summary": season_summary,
-            "season_matches_data": matches_data
+            "season_matches_data": matches_data,
+            "competition_data": competition_data
         }
