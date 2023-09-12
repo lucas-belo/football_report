@@ -6,7 +6,7 @@ from ..utils import teams_urls
 class OgolSpiderSpider(scrapy.Spider):
     name = "ogol_spider"
     allowed_domains = ["www.ogol.com.br"]
-    start_urls = [teams_urls.teams_urls["Coritiba"]]
+    start_urls = [teams_urls.teams_urls["Corinthians"]]
 
     def parse(self, response):
         season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/div[1]/text()').get()

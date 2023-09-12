@@ -26,23 +26,21 @@ body {
 }
 
 .team-logo {
-    max-width: 100px; /* Ajuste o tamanho máximo da imagem conforme necessário */
-    margin-right: 20px; /* Espaço entre o escudo e o nome */
+    max-width: 100px;
+    margin-right: 20px;
 }
 
 .team-name {
-    flex-grow: 1; /* Permite que o nome do time ocupe o espaço restante */
-    text-align: left; /* Centraliza o nome horizontalmente */
+    flex-grow: 1;
+    text-align: left;
 }
 
 .data-list li {
     margin-bottom: 10px;
     color: #333;
     font-size: 20px;
-    line-height: 1.5; /* Adicione esta linha para ajustar o espaço entre as linhas */
+    line-height: 1.5;
 }
-
-
 
 h1 {
     text-align: center;
