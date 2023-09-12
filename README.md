@@ -3,7 +3,7 @@
 # Overview
 The Football Team Reporting System is a Python-based web application that allows users to generate reports for various football teams. The system utilizes a MongoDB NoSQL database to store detailed information about football teams, including their history, titles, and more. Users can select a country, league, and team through a user-friendly HTML/CSS interface, and the system generates a report based on both the stored database information and real-time data scraped from the web using Scrapy.
 
-Features
+# Features
 User-friendly web interface for selecting teams.
 MongoDB database for storing team data.
 Real-time data scraping using Scrapy.
@@ -24,7 +24,7 @@ Scrapy Scraper: A Scrapy-based web scraper that fetches real-time data such as r
 Report Generator: Integrates the database data and scraped data using Jinja2 templating to create customized reports for selected teams.
 Front-end Templates: HTML/CSS templates that are populated with data from the report generator.
 
-Usage
+# Usage
 Start the MongoDB server and import the initial team data into the database.
 
 Run the Scrapy scraper to fetch real-time data from the web.
@@ -37,13 +37,14 @@ The system will generate a report based on the selected team's data from the dat
 
 The report will be displayed on the user's screen, providing a comprehensive overview of the selected football team.
 
-Dependencies
+# Dependencies
 Python
 MongoDB
 Scrapy
 Jinja2
 HTML/CSS for the user interface
-Contributing
+
+# Contributing
 If you'd like to contribute to the Football Team Reporting System, please follow these steps:
 
 Fork the repository.
@@ -51,15 +52,16 @@ Create a new branch for your feature or bug fix.
 Make your changes and commit them with clear, concise commit messages.
 Push your changes to your fork.
 Submit a pull request to the main repository.
-License
+
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
+# Contact
 If you have any questions or suggestions, please feel free to contact the project maintainers:
 
 Lucas Belo
 lhbelo@gmail.com
 
-Acknowledgments
+# Acknowledgments
 Special thanks to Scrapy for providing a powerful web scraping framework.
 Thanks to Jinja2 for enabling seamless integration between Python and HTML/CSS templates.
