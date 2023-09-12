@@ -6,7 +6,7 @@ from ..utils import teams_urls
 class OgolSpiderSpider(scrapy.Spider):
     name = "ogol_spider"
     allowed_domains = ["www.ogol.com.br"]
-    start_urls = [teams_urls.teams_urls["Corinthians"]]
+    start_urls = [teams_urls.teams_urls["Coritiba"]]
 
     def parse(self, response):
         season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/div[1]/text()').get()
@@ -74,8 +74,19 @@ class OgolSpiderSpider(scrapy.Spider):
             hour = row.xpath('.//td[3]/text()').get()
             league = row.xpath('.//td[4]/div/div[2]/a/text()').get()
             home_team = row.xpath('.//td[5]/a/text()').get()
+
+            if home_team is None:
+                home_team = row.xpath('.//td[5]/a/b/text()').get()
+                if home_team is None:
+                    home_team = row.xpath('.//td[5]/div/div[1]/a/b/text()').get()
+
             score_vs = row.xpath('.//td[6]/a/text()').get()
             away_team = row.xpath('.//td[7]/a/text()').get()
+
+            if away_team is None:
+                away_team = row.xpath('.//td[7]/a/b/text()').get()
+                if away_team is None:
+                    away_team = row.xpath('.//td[7]/div/div[2]/a/text()').get()
 
             stat = {
                 "date": date,
