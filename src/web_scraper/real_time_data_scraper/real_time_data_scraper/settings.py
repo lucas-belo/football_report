@@ -13,8 +13,9 @@ SPIDER_MODULES = ["real_time_data_scraper.spiders"]
 NEWSPIDER_MODULE = "real_time_data_scraper.spiders"
 
 
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "real_time_data_scraper (+http://www.yourdomain.com)"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -31,7 +32,7 @@ ROBOTSTXT_OBEY = True
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
