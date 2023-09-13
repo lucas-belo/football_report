@@ -13,18 +13,20 @@ Displays information such as team history, titles, recent games, upcoming matche
 Project Structure
 The project consists of several components:
 
-Database: The MongoDB database stores detailed information about football teams, including their names, states, stadiums, year of foundation, titles won (internationals, nationals, regionals), relegations, fan statistics, and stadium details.
+# Database: 
+The MongoDB database stores detailed information about football teams, including their names, states, stadiums, year of foundation, titles won (internationals, nationals, regionals), relegations, fan statistics, and stadium details.
 
-Web Interface: The user interacts with the system through an HTML/CSS-based web interface. Users can select a country, league, and team to generate a report for.
+# Web Interface: 
+The user interacts with the system through an HTML/CSS-based web interface. Users can select a country, league, and team to generate a report for.
 
-Python Modules:
+# Python Modules:
 
 Database Connection: Contains modules for connecting to and interacting with the MongoDB database.
 Scrapy Scraper: A Scrapy-based web scraper that fetches real-time data such as recent games, upcoming matches, league standings, and squad details.
 Report Generator: Integrates the database data and scraped data using Jinja2 templating to create customized reports for selected teams.
 Front-end Templates: HTML/CSS templates that are populated with data from the report generator.
 
-# Usage
+# Flow
 Start the MongoDB server and import the initial team data into the database.
 
 Run the Scrapy scraper to fetch real-time data from the web.
@@ -39,22 +41,29 @@ The report will be displayed on the user's screen, providing a comprehensive ove
 
 # Dependencies
 Python
+
 MongoDB
+
 Scrapy
+
 Jinja2
+
 HTML/CSS for the user interface
+
 
 # Contributing
 If you'd like to contribute to the Football Team Reporting System, please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them with clear, concise commit messages.
-Push your changes to your fork.
-Submit a pull request to the main repository.
 
-# License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Fork the repository.
+
+Create a new branch for your feature or bug fix.
+
+Make your changes and commit them with clear, concise commit messages.
+
+Push your changes to your fork.
+
+Submit a pull request to the main repository.
 
 # Contact
 If you have any questions or suggestions, please feel free to contact the project maintainers:
