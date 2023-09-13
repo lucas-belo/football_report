@@ -1,9 +1,9 @@
-from connection import mongodb_connection
+from connection import MongoDbManager
 
 
 def get_document(database_name, collection_name, nome):
     try:
-        client = mongodb_connection()
+        client = MongoDbManager.mongodb_connection()
         if client:
             db = client[database_name]
             collection = db[collection_name]
