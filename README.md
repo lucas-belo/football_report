@@ -13,9 +13,11 @@ Displays information such as team history, titles, recent games, upcoming matche
 Project Structure
 The project consists of several components:
 
-# Database: The MongoDB database stores detailed information about football teams, including their names, states, stadiums, year of foundation, titles won (internationals, nationals, regionals), relegations, fan statistics, and stadium details.
+# Database: 
+The MongoDB database stores detailed information about football teams, including their names, states, stadiums, year of foundation, titles won (internationals, nationals, regionals), relegations, fan statistics, and stadium details.
 
-# Web Interface: The user interacts with the system through an HTML/CSS-based web interface. Users can select a country, league, and team to generate a report for.
+# Web Interface: 
+The user interacts with the system through an HTML/CSS-based web interface. Users can select a country, league, and team to generate a report for.
 
 # Python Modules:
 
