@@ -7,6 +7,7 @@ import scrapy
 
 
 class RealTimeDataScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    season_year = scrapy.Field()
+    season_matches_data = scrapy.Field()
+    competition_data = scrapy.Field()
+    current_matches_data = scrapy.Field()
