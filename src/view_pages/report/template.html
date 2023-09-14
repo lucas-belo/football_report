@@ -62,17 +62,22 @@
         <div class="divider"></div>
 
         <div class="section">
-            <h2 class="section-title">Quantidade de Rebaixamentos</h2>
-            <div class="section-divider"></div>
-            <p>O time foi rebaixado {{ relegation[0].quantity }} vezes em {{ relegation[0].competition }} ({{ relegation[0].years | join(', ') }}).</p>
+            <h2 class="section-title">Rebaixamentos</h2>
+            <ul class="data-list">
+                <ul>
+                        {% for relegation_i in relegation %}
+                        <li>{{ relegation_i.competition }} - {{ relegation_i.quantity }} ({{ relegation_i.years | join(', ') }})</li>
+                        {% endfor %}
+                </ul>
         </div>
 
         <div class="divider"></div>
 
         <div class="section">
-            <h2 class="section-title">Número de Torcedores</h2>
+            <h2 class="section-title">Torcida</h2>
             <div class="section-divider"></div>
-            <p>O time tem aproximadamente {{ crowd.quantity }} milhões de torcedores. A principal organizada de torcedores é {{ crowd.main_organized_crowd }}.</p>
+            <p>O time tem aproximadamente {{ crowd.quantity }} torcedores. </p>
+           <p>A principal torcida organizada do clube é: {{ crowd.main_organized_crowd }}. </p>
         </div>
 
         <div class="divider"></div>
@@ -82,7 +87,7 @@
             <div class="section-divider"></div>
 
             <div class="subsection">
-            <h3 class="subsection-title">Posições em Competições</h3>
+            <h3 class="subsection-title">Jogos da temporada</h3>
 
             <table class="data-table">
                     <thead>

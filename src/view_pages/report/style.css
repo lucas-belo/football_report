@@ -13,7 +13,7 @@ body {
     background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    border-top: 5px solid #007BFF;
+    border-top: 5px solid #CED2DC;
 }
 
 .team-tittle {
@@ -112,6 +112,8 @@ h2 {
 .data-list ul li {
     margin-bottom: 10px;
     color: #444;
+    line-height: 1.5;
+
 }
 
 .divider {
