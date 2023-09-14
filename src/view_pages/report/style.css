@@ -1,5 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
@@ -25,6 +26,11 @@ body {
     margin-bottom: 20px;
 }
 
+.section-divider {
+    border-top: 2px solid #CED2DC; /* Defina a cor e espessura da linha conforme desejado */
+    margin-bottom: 20px; /* Ajuste o espaço após a divisória conforme necessário */
+}
+
 .team-logo {
     max-width: 100px;
     margin-right: 20px;
@@ -44,40 +50,64 @@ body {
 
 h1 {
     text-align: center;
-    color: #007BFF;
+    color: #000000;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #333;
+    color: #000000;
     font-size: 28px;
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
+/* Estilizando a seção de títulos */
 .section {
-    margin-top: 20px;
+    background-color: #f2f2f2;
     padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 .section-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #007BFF;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
+/* Estilizando a lista de títulos */
 .data-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .data-list li {
+    margin-bottom: 20px;
+}
+
+.data-list li:first-child {
+    margin-top: 15px; /* Ajuste o valor conforme necessário */
+}
+
+/* Estilizando as categorias de títulos */
+.data-list strong {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilizando os títulos individuais */
+.data-list ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+
+}
+
+.data-list ul li {
     margin-bottom: 10px;
-    color: #333;
-    font-size: 20px;
+    color: #444;
 }
 
 .divider {
@@ -91,8 +121,43 @@ p {
 }
 
 .highlight {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #CED2DC;
+    color: #000000;
     padding: 5px 10px;
     border-radius: 5px;
+
 }
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.data-table th {
+    background-color: #CED2DC;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #ECEFF8;
+}
+
+.data-table tr:nth-child(odd) {
+    background-color: #FAFCFF;
+}
+
+.data-table thead {
+    background-color: #333;
+    color: #000000;
+}
+

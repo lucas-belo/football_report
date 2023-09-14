@@ -13,7 +13,7 @@ from .ogol_modules import (
 class OgolSpiderSpider(scrapy.Spider):
     name = "ogol_spider"
     allowed_domains = ["www.ogol.com.br"]
-    start_urls = [teams_urls.teams_urls["Flamengo"]]
+    start_urls = [teams_urls.teams_urls["Ituano"]]
 
     def parse(self, response):
 

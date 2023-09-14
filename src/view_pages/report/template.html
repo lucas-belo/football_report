@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>{{ team }}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="team-tittle">
+            <img src="pics/corinthians.png" alt="Escudo do Time" style="max-width: 200px; height: auto;" class="team-logo">
+            <h1 class="team-name">{{ team }}</h1>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Dados Gerais</h2>
+            <div class="section-divider"></div>
+            <ul class="data-list">
+                <li><strong>Estado:</strong> {{ state }}</li>
+                <li><strong>Estádio:</strong> {{ stadium.name }}</li>
+                <li><strong>Ano de Fundação:</strong> {{ founding_year }}</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        {% if titles.international or titles.national or titles.regional %}
+        <div class="section">
+            <h2 class="section-title">Títulos</h2>
+            <div class="section-divider"></div>
+            <ul class="data-list">
+                <br>
+                <li><strong>Internacionais:</strong>
+                    <ul>
+                        {% for intl_title in titles.international %}
+                        <li>{{ intl_title.competition }} - {{ intl_title.quantity }} ({{ intl_title.years | join(', ') }})</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <br>
+                <li><strong>Nacionais:</strong>
+                    <ul>
+                        {% for nat_title in titles.national %}
+                        <li>{{ nat_title.competition }} - {{ nat_title.quantity }} ({{ nat_title.years | join(', ') }})</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <br>
+                <li><strong>Estaduais/Regionais:</strong>
+                    <ul>
+                        {% for reg_title in titles.regional %}
+                        <li>{{ reg_title.competition }} - {{ reg_title.quantity }} ({{ reg_title.years | join(', ') }})</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <!-- Adicione mais categorias de títulos conforme necessário -->
+            </ul>
+        </div>
+        {% endif %}
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2 class="section-title">Quantidade de Rebaixamentos</h2>
+            <div class="section-divider"></div>
+            <p>O time foi rebaixado {{ relegation[0].quantity }} vezes em {{ relegation[0].competition }} ({{ relegation[0].years | join(', ') }}).</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2 class="section-title">Número de Torcedores</h2>
+            <div class="section-divider"></div>
+            <p>O time tem aproximadamente {{ crowd.quantity }} milhões de torcedores. A principal organizada de torcedores é {{ crowd.main_organized_crowd }}.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <h2 class="section-title">Temporada Atual ({{ season_year }})</h2>
+            <div class="section-divider"></div>
+
+            <div class="subsection">
+            <h3 class="subsection-title">Posições em Competições</h3>
+
+            <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Competição</th>
+                            <th>Jogos</th>
+                            <th>Vitórias</th>
+                            <th>Empates</th>
+                            <th>Derrotas</th>
+                            <th>Gols</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for match_data in season_matches_data %}
+                        <tr>
+                            <td>{{ match_data.competition }}</td>
+                            <td>{{ match_data.matches_played }}</td>
+                            <td>{{ match_data.wins }}</td>
+                            <td>{{ match_data.draws }}</td>
+                            <td>{{ match_data.losses }}</td>
+                            <td>{{ match_data.goals }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="subsection">
+            <h3 class="subsection-title">Posições em Competições</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Competição</th>
+                        <th>Posição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for comp_data in competition_data %}
+                    <tr>
+                        <td>{{ comp_data.competition }}</td>
+                        <td>{{ comp_data.Position }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="subsection">
+            <h3 class="subsection-title">Jogos anteriores/próximos</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Liga</th>
+                        <th>Time da Casa</th>
+                        <th>vs</th>
+                        <th>Time Visitante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for match_data in current_matches_data %}
+                    <tr>
+                        <td>{{ match_data.date }}</td>
+                        <td>{{ match_data.hour }}</td>
+                        <td>{{ match_data.league }}</td>
+                        <td>{{ match_data.home_team }}</td>
+                        <td>{{ match_data.score_vs}}</td>
+                        <td>{{ match_data.away_team }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="divider"></div>
+
+        <p>Para mais informações, visite o site oficial do <span class="highlight">{{ team }}</span>.</p>
+    </div>
+</body>
+</html>
