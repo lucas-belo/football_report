@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
     background-color: #f2f2f2;
     margin: 0;
@@ -21,7 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #007BFF;
+    color: #000000;
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -39,6 +39,9 @@ body {
 .team-name {
     flex-grow: 1;
     text-align: left;
+    font-size: 36px;
+    color: #000000;
+
 }
 
 .data-list li {
@@ -51,13 +54,13 @@ body {
 h1 {
     text-align: center;
     color: #000000;
-    font-size: 36px;
+    font-size: 26px;
     margin-bottom: 20px;
 }
 
 h2 {
     color: #000000;
-    font-size: 28px;
+    font-size: 20px;
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -71,7 +74,7 @@ h2 {
 }
 
 .section-title {
-    font-size: 1.5em;
+    font-size: 23px;
     color: #333;
     margin-bottom: 20px;
 }
@@ -85,6 +88,7 @@ h2 {
 
 .data-list li {
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .data-list li:first-child {
@@ -117,7 +121,8 @@ h2 {
 
 p {
     color: #555;
-    font-size: 20px;
+    font-size: 18px;
+
 }
 
 .highlight {
