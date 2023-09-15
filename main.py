@@ -1,5 +1,5 @@
 from src.database.query import get_document
-from src.web_scraper.real_time_data_scraper.spider_run import *
+from src.web_scraper.real_time_data_scraper.spider_run import RunSpider
 from src.data_processing.json_unifier import json_formatter
 from src.data_processing.data_processing import data_processing
 
@@ -30,8 +30,6 @@ scraper_json = data[0]
 # Format jsons
 
 formatted_json = json_formatter(document, scraper_json)
-
-print(formatted_json)
 
 data_processing(formatted_json, 'src/view_pages/report/template.html')
 
