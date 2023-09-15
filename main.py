@@ -1,10 +1,11 @@
 from src.database.query import get_document
 from src.web_scraper.real_time_data_scraper.spider_run import *
 from src.data_processing.json_unifier import json_formatter
+from src.data_processing.data_processing import data_processing
 
 import json
 
-team_name = "Corinthians"
+team_name = "Sport Club Corinthians Paulista"
 
 # Query database
 
@@ -28,5 +29,11 @@ scraper_json = data[0]
 
 # Format jsons
 
-json_formatter(document, scraper_json)
+formatted_json = json_formatter(document, scraper_json)
+
+print(formatted_json)
+
+data_processing(formatted_json, 'src/view_pages/report/template.html')
+
+
 

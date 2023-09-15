@@ -21,5 +21,5 @@ def data_processing(json, template_html_file):
         current_matches_data=json["current_matches_data"]
     )
 
-    with open("report.html", "w", encoding="utf-8") as output_file:
+    with open("src/view_pages/report/report.html", "w", encoding="utf-8") as output_file:
         output_file.write(html_relatorio)

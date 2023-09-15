@@ -10,7 +10,7 @@ def get_document(database_name, collection_name, nome):
             print("Connected to the database")
 
             query_criteria = {
-                "nome": nome
+                "name": nome
             } if nome else {}
 
             document = collection.find_one(query_criteria)
