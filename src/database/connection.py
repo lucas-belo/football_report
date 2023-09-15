@@ -28,3 +28,4 @@ class MongoDbManager:
             self.client.close()
             print("Disconnected from the database")
             self.client = None
+

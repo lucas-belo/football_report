@@ -13,7 +13,14 @@ from .ogol_modules import (
 class OgolSpiderSpider(scrapy.Spider):
     name = "ogol_spider"
     allowed_domains = ["www.ogol.com.br"]
-    start_urls = [teams_urls.teams_urls["Ituano"]]
+
+    def __init__(self, team_name=None, *args, **kwargs):
+        super(OgolSpiderSpider, self).__init__(*args, **kwargs)
+        self.team_name = team_name
+        if self.team_name:
+            self.start_urls = [teams_urls.teams_urls.get(self.team_name)]
+
+    # start_urls = [teams_urls.teams_urls["Ituano"]]
 
     def parse(self, response):
 
@@ -44,3 +51,12 @@ class OgolSpiderSpider(scrapy.Spider):
             "competition_data": competition_data,
             "current_matches_data": current_matches_data
         }
+
+        result = {
+            "season_year": season_year,
+            "season_matches_data": matches_data,
+            "competition_data": competition_data,
+            "current_matches_data": current_matches_data
+        }
+
+        return result

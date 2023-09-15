@@ -1,4 +1,4 @@
-from connection import MongoDbManager
+from .connection import MongoDbManager
 
 
 def get_document(database_name, collection_name, nome):

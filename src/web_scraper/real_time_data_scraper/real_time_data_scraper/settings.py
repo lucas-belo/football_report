@@ -23,6 +23,12 @@ DOWNLOAD_DELAY = 2
 ROBOTSTXT_OBEY = False
 
 
+FEEDS = {
+    'team_data.json': {
+        'format': 'json'
+    }
+}
+
 # DEFAULT_REQUEST_HEADERS = {
 #     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0",
 #     'Accept-Language': 'en-US,en;q=0.9',
