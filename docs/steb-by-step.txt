@@ -25,7 +25,7 @@ A API cria objetos JSON ou estruturas de dados específicas com base nos dados e
 
 - Renderização da Página HTML:
 
-A API utiliza um mecanismo de template (por exemplo, Jinja2) para renderizar uma página HTML com as informações formatadas.
+A API utiliza um mecanismo de template (Jinja2) para renderizar uma página HTML com as informações formatadas.
 Os dados em tempo real são inseridos nos templates HTML, preenchendo a página com os relatórios específicos do time de futebol selecionado.
 Exibição ao Usuário:
 
