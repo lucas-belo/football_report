@@ -67,6 +67,7 @@ teams_urls = {
     "Santa Cruz": "https://www.ogol.com.br/equipa.php?id=2253",
     "Santo André": "https://www.ogol.com.br/equipa.php?id=3452",
     "Santos": "https://www.ogol.com.br/equipa.php?id=2254",
+    "São Paulo Futebol Clube": "https://www.ogol.com.br/equipa.php?id=2256",
     "São Bernardo": "https://www.ogol.com.br/equipa.php?id=15771",
     "São Caetano": "https://www.ogol.com.br/equipa.php?id=2255",
     "São José": "https://www.ogol.com.br/equipa.php?id=9638",

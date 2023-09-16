@@ -5,7 +5,7 @@ from src.data_processing.data_processing import data_processing
 
 import json
 
-team_name = "Sport Club Corinthians Paulista"
+team_name = "São Paulo Futebol Clube"
 
 # Query database
 
