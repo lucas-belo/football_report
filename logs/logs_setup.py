@@ -5,8 +5,8 @@ from datetime import datetime
 todays_date_for_files = datetime.now().strftime("%d_%m_%Y")
 
 
-def setup_loggin():
-    log_directory = f"C:/Users/lucas.belo/OneDrive - CIAL Dun & Bradstreet/Documentos/Python/BAs_pendency_2.0/logs"
+def setup_logging():
+    log_directory = f"log_files"
 
     log_filename = os.path.join(log_directory, f"{todays_date_for_files}_run.log")
     logging.basicConfig(
@@ -16,8 +16,8 @@ def setup_loggin():
     )
 
 
-setup_loggin()
+setup_logging()
 
 
-def succesfully_process_log():
-    logging.info("The process was completed successfully")
+def successfully_process_log():
+    logging.info("The report was successfully generated")
