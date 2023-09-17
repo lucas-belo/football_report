@@ -1,3 +1,6 @@
+import logging
+
+
 def season_summary(response):
     try:
         table_rows = response.xpath(
@@ -30,9 +33,12 @@ def season_summary(response):
         if not matches_data:
             matches_data = "Os dados das partidas desse time não foram encontrados..."
 
+        print("Season Matches Data was successfully scraped")
+        logging.info("Season Matches Data was successfully scraped")
         return matches_data
 
     except Exception as e:
         matches_data = "Os dados das partidas desse time não foram encontrados..."
         print(f"Error to get matches_data: {e}")
+        logging.error(f"Error to get matches_data: {e}")
         return matches_data

@@ -1,3 +1,10 @@
+import logging
+
+from logs.logs_setup import setup_logging
+
+setup_logging()
+
+
 def competitions(response):
     try:
         official_competitions_div = response.xpath('//div[@class="section" and text()="Competições Oficiais"]')
@@ -26,12 +33,16 @@ def competitions(response):
             if not competition_data:
                 competition_data = "Os dados das competições desse time não foram encontrados..."
 
-            return competition_data
         else:
             competition_data = "Os dados das competições desse time não foram encontrados..."
             return competition_data
 
+        print("Competition data was successfully scraped")
+        logging.info("Competition data was successfully scraped")
+        return competition_data
+
     except Exception as e:
         competition_data = "Os dados das competições desse time não foram encontrados..."
         print(f"Error to get the competition data: {e}")
+        logging.info(f"Error to get the competition data: {e}")
         return competition_data

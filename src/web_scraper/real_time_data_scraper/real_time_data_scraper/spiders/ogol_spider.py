@@ -1,5 +1,5 @@
 import scrapy
-
+import logging
 
 from ..utils import teams_urls
 
@@ -8,6 +8,10 @@ from .ogol_modules import (
     competitions,
     previous_and_next_games
                            )
+
+from logs.logs_setup import setup_logging
+
+setup_logging()
 
 
 class OgolSpiderSpider(scrapy.Spider):
@@ -26,37 +30,47 @@ class OgolSpiderSpider(scrapy.Spider):
 
         # Season year
 
-        season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/div[1]/text()').get()
+        print("Starting the ogol_spider")
+        logging.info("Starting the ogol_spider")
 
-        if season_year.isnumeric():
-            pass
-        else:
-            season_year = "Temporada atual não encontrada"
+        try:
+            season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/div[1]/text()').get()
 
-        # Season summary
+            if season_year.isnumeric():
+                pass
+            else:
+                season_year = "Temporada atual não encontrada"
 
-        matches_data = season_summary.season_summary(response)
+            # Season summary
 
-        # Competitions
+            matches_data = season_summary.season_summary(response)
 
-        competition_data = competitions.competitions(response)
+            # Competitions
 
-        # Previous and next games
+            competition_data = competitions.competitions(response)
 
-        current_matches_data = previous_and_next_games.previous_and_next_games(response)
+            # Previous and next games
 
-        yield {
-            "season_year": season_year,
-            "season_matches_data": matches_data,
-            "competition_data": competition_data,
-            "current_matches_data": current_matches_data
-        }
+            current_matches_data = previous_and_next_games.previous_and_next_games(response)
 
-        result = {
-            "season_year": season_year,
-            "season_matches_data": matches_data,
-            "competition_data": competition_data,
-            "current_matches_data": current_matches_data
-        }
+            yield {
+                "season_year": season_year,
+                "season_matches_data": matches_data,
+                "competition_data": competition_data,
+                "current_matches_data": current_matches_data
+            }
 
-        return result
+            result = {
+                "season_year": season_year,
+                "season_matches_data": matches_data,
+                "competition_data": competition_data,
+                "current_matches_data": current_matches_data
+            }
+
+            print("ogol_spider successfully executed, data scraped!")
+            logging.info("ogol_spider successfully executed, data scraped!")
+            return result
+
+        except Exception as e:
+            print(f"An error occurred while running the ogol_spider: {e}")
+            logging.info(f"An error occurred while running the ogol_spider: {e}")

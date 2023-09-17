@@ -1,3 +1,10 @@
+import logging
+
+from logs.logs_setup import setup_logging
+
+setup_logging()
+
+
 def previous_and_next_games(response):
     try:
 
@@ -38,8 +45,11 @@ def previous_and_next_games(response):
         if not current_matches_data:
             current_matches_data = "Os dados dos jogos anteriores e próximos desse time não foram encontrados..."
 
+        print("Current Matches Data was successfully scraped!")
+        logging.info("Current Matches Data was successfully scraped!")
         return current_matches_data
     except Exception as e:
         current_matches_data = "Os dados das partidas anteriores e próximas desse time não foram encontrados..."
-        print(f"Error to get the current_matches_data data: {e}")
+        print(f"Error to get the Current Matches Data: {e}")
+        logging.error(f"Error to get the Current Matches Data: {e}")
         return current_matches_data

@@ -6,7 +6,7 @@ todays_date_for_files = datetime.now().strftime("%d_%m_%Y")
 
 
 def setup_logging():
-    log_directory = f"log_files"
+    log_directory = f"logs/log_files"
 
     log_filename = os.path.join(log_directory, f"{todays_date_for_files}_run.log")
     logging.basicConfig(
