@@ -1,37 +1,34 @@
+- User Request:
 
-- Solicitação do Usuário:
+The user selects the country, league, and football team of their choice on the user interface.
 
-O usuário seleciona o país, a liga e o time de futebol de sua escolha na interface de usuário.
+- Communication with the API:
 
+The user interface sends a request to the API, including information about the chosen country, league, and team.
+Database Verification:
 
-- Comunicação com a API:
-
-A interface de usuário envia uma solicitação para a API, incluindo informações sobre o país, a liga e o time escolhidos.
-Verificação no Banco de Dados:
-
-A API verifica se informações gerais sobre o time (como nome, estado, títulos, estádio, etc.) estão disponíveis no banco de dados MongoDB.
-Se essas informações estiverem no banco de dados, a API as recupera.
+The API checks if general information about the team (such as name, state, titles, stadium, etc.) is available in the MongoDB database.
+If this information is in the database, the API retrieves it.
 
 - Web Scraper:
 
-A API verifica se dados em tempo real (como os últimos jogos, o próximo jogo e a posição na liga) estão disponíveis no banco de dados.
-Se essas informações não estiverem no banco de dados ou estiverem desatualizadas, a API aciona o web scraper (Scrapy) para coletar essas informações em tempo real, mas sem armazená-las no banco de dados.
+The API checks if real-time data (such as recent games, upcoming game, and league position) is available in the database.
+If this information is not in the database or is outdated, the API triggers the web scraper (Scrapy) to collect this real-time information but without storing it in the database.
 
-- Formatação dos Dados Temporários:
+- Formatting of Temporary Data:
 
-Os dados coletados pelo web scraper em tempo real são formatados imediatamente pela API, mas não são armazenados no banco de dados.
-A API cria objetos JSON ou estruturas de dados específicas com base nos dados em tempo real.
+The data collected by the web scraper in real-time is immediately formatted by the API but not stored in the database.
+The API creates JSON objects or specific data structures based on the real-time data.
 
+- Rendering of HTML Page:
 
-- Renderização da Página HTML:
+The API uses a template engine (Jinja2) to render an HTML page with the formatted information.
+The real-time data is inserted into the HTML templates, populating the page with specific reports for the selected football team.
+User Display:
 
-A API utiliza um mecanismo de template (Jinja2) para renderizar uma página HTML com as informações formatadas.
-Os dados em tempo real são inseridos nos templates HTML, preenchendo a página com os relatórios específicos do time de futebol selecionado.
-Exibição ao Usuário:
+The generated HTML page is sent back to the front-end, which displays it to the user.
+The user sees updated and complete reports of the football team on the interface.
 
-A página HTML gerada é enviada de volta para o front-end, que a exibe ao usuário.
-O usuário vê os relatórios atualizados e completos do time de futebol na interface.
+- Request Completion:
 
-- Encerramento da Solicitação:
-
-A API encerra a solicitação, e os dados temporários coletados pelo web scraper não são armazenados no banco de dados, garantindo que sejam exibidos apenas uma vez.
+The API concludes the request, and the temporary data collected by the web scraper is not stored in the database, ensuring it is displayed only once.
