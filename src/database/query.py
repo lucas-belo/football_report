@@ -37,3 +37,6 @@ def get_document(database_name, collection_name, nome):
         print(f"Error to get document: {e}")
         logging.error(f"Error to get document: {e}")
         return None
+
+
+get_document("brazil_teams", "serie_a", "Sport Club Corinthians Paulista")

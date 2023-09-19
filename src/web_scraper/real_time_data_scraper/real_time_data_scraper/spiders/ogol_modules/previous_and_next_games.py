@@ -24,6 +24,9 @@ def previous_and_next_games(response):
                     home_team = row.xpath('.//td[5]/div/div[1]/a/b/text()').get()
 
             score_vs = row.xpath('.//td[6]/a/text()').get()
+            if score_vs is None:
+                score_vs = f"{row.xpath('.//td[6]/a/div[12]/text()').get()} - Em andamento"
+
             away_team = row.xpath('.//td[7]/a/text()').get()
 
             if away_team is None:
