@@ -7,7 +7,7 @@ from logs.logs_setup import setup_logging
 setup_logging()
 
 
-def get_document(database_name, collection_name, nome):
+def get_document(database_name, collection_name, name):
     try:
         client = MongoDbManager.mongodb_connection()
         if client:
@@ -17,8 +17,8 @@ def get_document(database_name, collection_name, nome):
             print("Connected to the database")
 
             query_criteria = {
-                "name": nome
-            } if nome else {}
+                "name": name
+            } if name else {}
 
             document = collection.find_one(query_criteria)
 
@@ -37,6 +37,3 @@ def get_document(database_name, collection_name, nome):
         print(f"Error to get document: {e}")
         logging.error(f"Error to get document: {e}")
         return None
-
-
-get_document("brazil_teams", "serie_a", "Sport Club Corinthians Paulista")

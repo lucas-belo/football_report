@@ -13,7 +13,7 @@ def data_processing(json, template_html_file):
             template_html = file.read()
         template = Template(template_html)
 
-        html_relatorio = template.render(
+        html_report = template.render(
             team=json["name"],
             state=json["state"],
             stadium_name=json["stadium_name"],
@@ -29,12 +29,12 @@ def data_processing(json, template_html_file):
         )
 
         with open("src/view_pages/report/report.html", "w", encoding="utf-8") as output_file:
-            output_file.write(html_relatorio)
+            output_file.write(html_report)
 
         print("Json data successfully processed and HTML rendered")
         logging.info("Json data successfully processed and HTML rendered")
 
     except Exception as e:
-        print(f"Error to process the json data and render the HTML")
-        logging.error(f"Error to process the json data and render the HTML")
+        print(f"Error to process the json data and render the HTML: {e}")
+        logging.error(f"Error to process the json data and render the HTML: {e}")
 

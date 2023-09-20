@@ -16,5 +16,5 @@ def json_formatter(json1, json2):
         return combined_json
 
     except Exception as e:
-        print("Error to unify the jsons")
-        logging.error("Error to unify the jsons")
+        print(f"Error to unify the jsons: {e}")
+        logging.error(f"Error to unify the jsons: {e}")
