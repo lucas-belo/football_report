@@ -22,6 +22,8 @@ DOWNLOAD_DELAY = 2
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+# Disable cookies (enabled by default)
+COOKIES_ENABLED = True
 
 FEEDS = {
     'team_data.json': {
@@ -50,8 +52,7 @@ FEEDS = {
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
-# Disable cookies (enabled by default)
-COOKIES_ENABLED = True
+
 
 
 
