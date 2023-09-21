@@ -5,11 +5,13 @@ from src.data_processing.json_unifier import json_formatter
 from src.database.query import get_document
 from src.web_scraper.real_time_data_scraper.spider_run import RunSpider
 
+country = "brazil_teams"
+league = "serie_a"
 team_name = "Sport Club Corinthians Paulista"
 
 # Query database
 
-document = get_document("brazil_teams", "serie_a", team_name)
+document = get_document(country, league, team_name)
 
 # Run Scraper
 
