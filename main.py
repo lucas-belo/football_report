@@ -4,6 +4,7 @@ from src.data_processing.data_processing import data_processing
 from src.data_processing.json_unifier import json_formatter
 from src.database.query import get_document
 from src.web_scraper.real_time_data_scraper.spider_run import RunSpider
+from logs.logs_setup import successfully_process_log
 
 
 def run_report_generator(country, league, team):
@@ -30,6 +31,7 @@ def run_report_generator(country, league, team):
 
     data_processing(formatted_json, 'src/view_pages/report/template.html')
 
+    successfully_process_log()
 
 
 country = "brazil_teams"
