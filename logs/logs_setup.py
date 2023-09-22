@@ -1,12 +1,13 @@
 import logging
 import os
 from datetime import datetime
+from path import project_folder
 
 todays_date_for_files = datetime.now().strftime("%d_%m_%Y")
 
 
 def setup_logging():
-    log_directory = f"logs/log_files"
+    log_directory = f"{project_folder}/logs/log_files"
 
     log_filename = os.path.join(log_directory, f"{todays_date_for_files}_run.log")
     logging.basicConfig(

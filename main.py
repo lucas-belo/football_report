@@ -34,7 +34,5 @@ def run_report_generator(country, league, team):
     successfully_process_log()
 
 
-country = "brazil_teams"
-league = "serie_a"
-team_name = "Sport Club Corinthians Paulista"
+run_report_generator("brazil_teams", "serie_a", "São Paulo Futebol Clube")
 
