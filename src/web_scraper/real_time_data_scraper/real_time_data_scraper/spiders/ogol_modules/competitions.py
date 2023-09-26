@@ -12,7 +12,7 @@ def competitions(response):
         competition_data = []
 
         if official_competitions_div:
-            season_divs = official_competitions_div.xpath('//*[@id="page_rightbar"]/div[1]/div[2]/div[2]/div')
+            season_divs = official_competitions_div.xpath('//*[@id="page_rightbar"]/div[1]/div/div[2]/div')
 
             for season_div in season_divs:
                 competition_text = season_div.xpath(

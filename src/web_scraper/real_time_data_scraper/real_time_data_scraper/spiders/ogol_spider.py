@@ -34,10 +34,14 @@ class OgolSpiderSpider(scrapy.Spider):
         logging.info("Starting the ogol_spider")
 
         try:
-            season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/div[1]/text()').get()
+            season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/h3/text()').get()
 
-            if season_year.isnumeric():
-                pass
+            if season_year is not None:
+                if season_year.isnumeric():
+                    pass
+                else:
+                    season_year = "Temporada atual não encontrada"
+
             else:
                 season_year = "Temporada atual não encontrada"
 
