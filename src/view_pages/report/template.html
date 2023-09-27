@@ -84,7 +84,7 @@
         <div class="section">
             <h2 class="section-title">Torcida</h2>
             <div class="section-divider"></div>
-            <p>O time tem aproximadamente {{ crowd.quantity }} torcedores. </p>
+            <p>O time tem aproximadamente {{ formatted_crowd_quantity }} torcedores. </p>
            <p>A principal torcida organizada do clube é: {{ crowd.main_organized_crowd }}. </p>
         </div>
 
@@ -94,7 +94,7 @@
         <div class="section">
             <h2 class="section-title">Estádio</h2>
             <p>O estádio do clube é: {{ stadium.name }}.</p>
-            <p>Tem capacidade para {{ stadium.capacity }} torcedores e está localizado em {{ stadium.location }}. </p>
+            <p>Tem capacidade para {{ formatted_stadium_capacity }} torcedores e está localizado em {{ stadium.location }}. </p>
 
         </div>
 
