@@ -20,3 +20,4 @@ async def root():
 @app.get("/report_generator")
 async def generate_report_endpoint(item: Item, bt: BackgroundTasks):
     return run_report_generator(item.country, item.league, item.team)
+

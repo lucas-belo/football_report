@@ -39,3 +39,4 @@ def run_report_generator(country, league, team):
 if __name__ == "__main__":
     run_report_generator("brazil_teams", "serie_a", "Grêmio Foot-Ball Porto Alegrense")
 
+
