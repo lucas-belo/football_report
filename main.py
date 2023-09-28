@@ -33,6 +33,8 @@ def run_report_generator(country, league, team):
 
     successfully_process_log()
 
+    return formatted_json
+
 
 if __name__ == "__main__":
     run_report_generator("brazil_teams", "serie_a", "Grêmio Foot-Ball Porto Alegrense")

@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, BackgroundTasks
 from pydantic import BaseModel
 
 from main import run_report_generator
@@ -14,11 +14,9 @@ class Item(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"Message": "Testing"}
+    return {"Usage:": "go to /docs"}
 
 
 @app.get("/report_generator")
-async def generate_report_endpoint(item: Item):
-    run_report_generator(item.country, item.league, item.team)
-    return "Report generated!"
-
+async def generate_report_endpoint(item: Item, bt: BackgroundTasks):
+    return run_report_generator(item.country, item.league, item.team)

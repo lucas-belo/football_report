@@ -1,0 +1,695 @@
+2023-09-28 14:14:58,445 - INFO - The file 'src/web_scraper/real_time_data_scraper/team_data.json' has been successfully deleted.
+2023-09-28 14:16:15,771 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 14:16:15,772 - INFO - Connected to the database
+2023-09-28 14:16:15,907 - INFO - Starting the ogol_spider runner
+2023-09-28 14:16:15,908 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 14:16:15,945 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:16:15,945 - INFO - Enabled addons:
+[]
+2023-09-28 14:16:15,950 - INFO - Overridden settings:
+{}
+2023-09-28 14:16:15,959 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\utils\request.py:248: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-09-28 14:16:15,975 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 14:16:16,024 - INFO - Telnet Password: 395bf29a24715003
+2023-09-28 14:16:16,214 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\extensions\feedexport.py:398: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2023-09-28 14:16:16,238 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:16:16,453 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:16:16,467 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:16:16,471 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:16:16,471 - INFO - Spider opened
+2023-09-28 14:16:16,508 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:16:16,508 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-09-28 14:16:17,988 - DEBUG - Crawled (200) <GET https://www.ogol.com.br/equipa.php?id=2256> (referer: None)
+2023-09-28 14:16:18,091 - INFO - Starting the ogol_spider
+2023-09-28 14:16:18,145 - INFO - Season Matches Data was successfully scraped
+2023-09-28 14:16:18,164 - INFO - Competition data was successfully scraped
+2023-09-28 14:16:18,172 - INFO - Current Matches Data was successfully scraped!
+2023-09-28 14:16:18,172 - DEBUG - Scraped from <200 https://www.ogol.com.br/equipa.php?id=2256>
+{'season_year': '2023', 'season_matches_data': [{'competition': 'Copa Sul-Americana', 'matches_played': '10', 'wins': '7', 'draws': '1', 'losses': '2', 'goals': '17-3'}, {'competition': 'Brasileirão', 'matches_played': '24', 'wins': '8', 'draws': '7', 'losses': '9', 'goals': '29-26'}, {'competition': 'Copa do Brasil', 'matches_played': '10', 'wins': '6', 'draws': '2', 'losses': '2', 'goals': '12-7'}, {'competition': 'Campeonato Paulista ', 'matches_played': '13', 'wins': '7', 'draws': '3', 'losses': '3', 'goals': '23-10'}, {'competition': 'Total', 'matches_played': '57', 'wins': '28', 'draws': '13', 'losses': '16', 'goals': '81-46'}], 'competition_data': [{'competition': 'Campeonato Paulista 2023', 'Position': 'QF'}, {'competition': 'Campeonato Brasileiro 2023', 'Position': '10º'}, {'competition': 'Copa do Brasil 2023', 'Position': '1.º'}, {'competition': 'Copa Sul-Americana 2023', 'Position': 'QF'}], 'current_matches_data': [{'date': '18/10', 'hour': '20:00', 'league': 'D1', 'home_team': 'Goiás', 'score_vs': 'vs', 'away_team': 'São Paulo'}, {'date': '07/10', 'hour': '18:30', 'league': 'D1', 'home_team': 'Vasco', 'score_vs': 'vs', 'away_team': 'São Paulo'}, {'date': '30/09', 'hour': '18:30', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': 'vs', 'away_team': 'Corinthians'}, {'date': '27/09', 'hour': '19:00', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': '2-1', 'away_team': 'Coritiba'}, {'date': '24/09', 'hour': '16:00', 'league': 'CB', 'home_team': 'São Paulo', 'score_vs': '1-1', 'away_team': 'Flamengo'}, {'date': '20/09', 'hour': '21:30', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': '1-2', 'away_team': 'Fortaleza'}]}
+2023-09-28 14:16:18,175 - INFO - ogol_spider successfully executed, data scraped!
+2023-09-28 14:16:18,175 - INFO - Closing spider (finished)
+2023-09-28 14:16:18,178 - INFO - Stored json feed (1 items) in: src/web_scraper/real_time_data_scraper/team_data.json
+2023-09-28 14:16:18,178 - INFO - Dumping Scrapy stats:
+{'downloader/request_bytes': 234,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 47281,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.669789,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 9, 28, 17, 16, 18, 178753),
+ 'httpcompression/response_bytes': 363918,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 16,
+ 'log_count/WARNING': 2,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 9, 28, 17, 16, 16, 508964)}
+2023-09-28 14:16:18,178 - INFO - Spider closed (finished)
+2023-09-28 14:16:18,195 - INFO - Jsons successfully combined
+2023-09-28 14:16:18,229 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 14:16:18,229 - INFO - The report was successfully generated
+2023-09-28 14:16:58,598 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:58,598 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:58,607 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:58,609 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:58,615 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:58,615 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:59,028 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:59,028 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:59,039 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:59,040 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:59,047 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:59,047 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:59,058 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:16:59,059 - DEBUG - No authority access information, soft fail
+2023-09-28 14:16:59,865 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 14:16:59,865 - INFO - Connected to the database
+2023-09-28 14:17:00,005 - INFO - Starting the ogol_spider runner
+2023-09-28 14:17:00,010 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 14:17:00,010 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:17:00,025 - INFO - Enabled addons:
+[]
+2023-09-28 14:17:00,031 - INFO - Overridden settings:
+{}
+2023-09-28 14:17:00,035 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 14:17:00,040 - INFO - Telnet Password: 249ed1e758357c58
+2023-09-28 14:17:00,046 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:17:00,048 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:17:00,048 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:17:00,048 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:17:00,048 - INFO - Spider opened
+2023-09-28 14:17:00,048 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:17:00,048 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-09-28 14:17:00,060 - ERROR - An error occurred trying to run the ogol_spider: 
+2023-09-28 14:17:00,060 - INFO - Jsons successfully combined
+2023-09-28 14:17:00,085 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 14:17:00,085 - INFO - The report was successfully generated
+2023-09-28 14:17:27,146 - INFO - Scrapy 2.10.1 started (bot: real_time_data_scraper)
+2023-09-28 14:17:27,200 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:17:27,202 - INFO - Enabled addons:
+[]
+2023-09-28 14:17:27,204 - INFO - Overridden settings:
+{'BOT_NAME': 'real_time_data_scraper',
+ 'DOWNLOAD_DELAY': 2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'real_time_data_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['real_time_data_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) '
+               'Gecko/20100101 Firefox/100.0'}
+2023-09-28 14:17:27,204 - DEBUG - Using selector: SelectSelector
+2023-09-28 14:17:27,207 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-09-28 14:17:27,207 - DEBUG - Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2023-09-28 14:17:27,245 - INFO - Telnet Password: 128e4df44aedf332
+2023-09-28 14:17:27,442 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:17:27,710 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:17:27,719 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:17:27,720 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:17:27,720 - INFO - Spider opened
+2023-09-28 14:17:27,739 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:17:27,742 - INFO - Telnet console listening on 127.0.0.1:6024
+2023-09-28 14:17:27,743 - INFO - Closing spider (finished)
+2023-09-28 14:17:27,745 - INFO - Stored json feed (0 items) in: team_data.json
+2023-09-28 14:17:27,745 - INFO - Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.004112,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 9, 28, 17, 17, 27, 743678),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 11,
+ 'start_time': datetime.datetime(2023, 9, 28, 17, 17, 27, 739566)}
+2023-09-28 14:17:27,746 - INFO - Spider closed (finished)
+2023-09-28 14:17:39,192 - INFO - The file 'src/web_scraper/real_time_data_scraper/team_data.json' has been successfully deleted.
+2023-09-28 14:17:40,529 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 14:17:40,529 - INFO - Connected to the database
+2023-09-28 14:17:40,661 - INFO - Starting the ogol_spider runner
+2023-09-28 14:17:40,668 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 14:17:40,693 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:17:40,697 - INFO - Enabled addons:
+[]
+2023-09-28 14:17:40,697 - INFO - Overridden settings:
+{}
+2023-09-28 14:17:40,699 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\utils\request.py:248: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-09-28 14:17:40,705 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 14:17:40,739 - INFO - Telnet Password: f234e90ee773f013
+2023-09-28 14:17:40,869 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\extensions\feedexport.py:398: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2023-09-28 14:17:40,881 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:17:41,032 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:17:41,038 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:17:41,038 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:17:41,038 - INFO - Spider opened
+2023-09-28 14:17:41,051 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:17:41,052 - INFO - Telnet console listening on 127.0.0.1:6024
+2023-09-28 14:17:42,564 - DEBUG - Crawled (200) <GET https://www.ogol.com.br/equipa.php?id=2243> (referer: None)
+2023-09-28 14:17:42,679 - INFO - Starting the ogol_spider
+2023-09-28 14:17:42,779 - INFO - Season Matches Data was successfully scraped
+2023-09-28 14:17:42,801 - INFO - Competition data was successfully scraped
+2023-09-28 14:17:42,871 - INFO - Current Matches Data was successfully scraped!
+2023-09-28 14:17:42,872 - DEBUG - Scraped from <200 https://www.ogol.com.br/equipa.php?id=2243>
+{'season_year': '2023', 'season_matches_data': [{'competition': 'Brasileirão', 'matches_played': '24', 'wins': '13', 'draws': '4', 'losses': '7', 'goals': '39-31'}, {'competition': 'Copa do Brasil', 'matches_played': '10', 'wins': '4', 'draws': '4', 'losses': '2', 'goals': '12-7'}, {'competition': 'Recopa Gaúcha', 'matches_played': '1', 'wins': '1', 'draws': '0', 'losses': '0', 'goals': '4-1'}, {'competition': 'Gaúcho', 'matches_played': '15', 'wins': '11', 'draws': '3', 'losses': '1', 'goals': '27-9'}, {'competition': 'Total', 'matches_played': '50', 'wins': '29', 'draws': '11', 'losses': '10', 'goals': '82-48'}], 'competition_data': [{'competition': 'Campeonato Gaúcho 2023', 'Position': '1.º'}, {'competition': 'Recopa Gaúcha 2023', 'Position': '1.º'}, {'competition': 'Campeonato Brasileiro 2023', 'Position': '3º'}, {'competition': 'Copa do Brasil 2023', 'Position': 'SF'}], 'current_matches_data': [{'date': '18/10', 'hour': '19:00', 'league': 'D1', 'home_team': 'Grêmio', 'score_vs': 'vs', 'away_team': 'Athletico Paranaense'}, {'date': '08/10', 'hour': '16:00', 'league': 'D1', 'home_team': 'Internacional', 'score_vs': 'vs', 'away_team': 'Grêmio'}, {'date': '30/09', 'hour': '16:00', 'league': 'D1', 'home_team': 'Fortaleza', 'score_vs': 'vs', 'away_team': 'Grêmio'}, {'date': '21/09', 'hour': '21:30', 'league': 'D1', 'home_team': 'Grêmio', 'score_vs': '1-0', 'away_team': 'Palmeiras'}, {'date': '18/09', 'hour': '21:00', 'league': 'D1', 'home_team': 'Corinthians', 'score_vs': '4-4', 'away_team': 'Grêmio'}, {'date': '14/09', 'hour': '21:30', 'league': 'D1', 'home_team': 'Red Bull Bragantino', 'score_vs': '2-0', 'away_team': 'Grêmio'}]}
+2023-09-28 14:17:42,873 - INFO - ogol_spider successfully executed, data scraped!
+2023-09-28 14:17:42,875 - INFO - Closing spider (finished)
+2023-09-28 14:17:42,876 - INFO - Stored json feed (1 items) in: src/web_scraper/real_time_data_scraper/team_data.json
+2023-09-28 14:17:42,877 - INFO - Dumping Scrapy stats:
+{'downloader/request_bytes': 234,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 48603,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.824385,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 9, 28, 17, 17, 42, 875602),
+ 'httpcompression/response_bytes': 386056,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 16,
+ 'log_count/WARNING': 2,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 9, 28, 17, 17, 41, 51217)}
+2023-09-28 14:17:42,877 - INFO - Spider closed (finished)
+2023-09-28 14:17:42,892 - INFO - Jsons successfully combined
+2023-09-28 14:17:42,909 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 14:17:42,909 - INFO - The report was successfully generated
+2023-09-28 14:17:59,115 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,115 - DEBUG - No authority access information, soft fail
+2023-09-28 14:17:59,120 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,121 - DEBUG - No authority access information, soft fail
+2023-09-28 14:17:59,124 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,125 - DEBUG - No authority access information, soft fail
+2023-09-28 14:17:59,548 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,548 - DEBUG - No authority access information, soft fail
+2023-09-28 14:17:59,560 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,560 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,560 - DEBUG - No authority access information, soft fail
+2023-09-28 14:17:59,560 - DEBUG - No authority access information, soft fail
+2023-09-28 14:17:59,565 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:17:59,565 - DEBUG - No authority access information, soft fail
+2023-09-28 14:18:00,375 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 14:18:00,379 - INFO - Connected to the database
+2023-09-28 14:18:00,510 - INFO - Starting the ogol_spider runner
+2023-09-28 14:18:00,515 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 14:18:00,515 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:18:00,515 - INFO - Enabled addons:
+[]
+2023-09-28 14:18:00,515 - INFO - Overridden settings:
+{}
+2023-09-28 14:18:00,515 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 14:18:00,515 - INFO - Telnet Password: b3b13673a36d5421
+2023-09-28 14:18:00,523 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:18:00,525 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:18:00,525 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:18:00,525 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:18:00,525 - INFO - Spider opened
+2023-09-28 14:18:00,525 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:18:00,530 - INFO - Telnet console listening on 127.0.0.1:6024
+2023-09-28 14:18:00,530 - ERROR - An error occurred trying to run the ogol_spider: 
+2023-09-28 14:18:00,530 - INFO - Jsons successfully combined
+2023-09-28 14:18:00,550 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 14:18:00,554 - INFO - The report was successfully generated
+2023-09-28 14:29:20,596 - INFO - Received SIGINT, shutting down gracefully. Send again to force 
+2023-09-28 14:29:40,390 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:29:40,390 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:29:40,394 - DEBUG - No authority access information, soft fail
+2023-09-28 14:29:40,395 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:29:40,395 - DEBUG - No authority access information, soft fail
+2023-09-28 14:29:40,395 - DEBUG - No authority access information, soft fail
+2023-09-28 14:29:40,825 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:29:40,825 - DEBUG - No authority access information, soft fail
+2023-09-28 14:29:40,831 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 14:29:40,834 - DEBUG - No authority access information, soft fail
+2023-09-28 14:29:41,658 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 14:29:41,658 - INFO - Connected to the database
+2023-09-28 14:29:41,788 - INFO - Starting the ogol_spider runner
+2023-09-28 14:29:41,795 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 14:29:41,795 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:29:41,797 - INFO - Enabled addons:
+[]
+2023-09-28 14:29:41,800 - INFO - Overridden settings:
+{}
+2023-09-28 14:29:41,801 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 14:29:41,802 - INFO - Telnet Password: b595120426c61236
+2023-09-28 14:29:41,805 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:29:41,807 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:29:41,807 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:29:41,807 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:29:41,807 - INFO - Spider opened
+2023-09-28 14:29:41,807 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:29:41,807 - INFO - Telnet console listening on 127.0.0.1:6025
+2023-09-28 14:29:41,807 - ERROR - An error occurred trying to run the ogol_spider: 
+2023-09-28 14:29:41,852 - INFO - Jsons successfully combined
+2023-09-28 14:29:41,875 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 14:29:41,875 - INFO - The report was successfully generated
+2023-09-28 14:34:36,124 - INFO - The file 'src/web_scraper/real_time_data_scraper/team_data.json' has been successfully deleted.
+2023-09-28 14:54:41,440 - INFO - Received SIGINT, shutting down gracefully. Send again to force 
+2023-09-28 14:54:45,057 - INFO - Received SIGINT twice, forcing unclean shutdown
+2023-09-28 14:55:26,693 - INFO - The file 'src/web_scraper/real_time_data_scraper/team_data.json' has been successfully deleted.
+2023-09-28 14:55:57,344 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 14:55:57,344 - INFO - Connected to the database
+2023-09-28 14:55:57,478 - INFO - Starting the ogol_spider runner
+2023-09-28 14:55:57,478 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 14:55:57,497 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 14:55:57,502 - INFO - Enabled addons:
+[]
+2023-09-28 14:55:57,502 - INFO - Overridden settings:
+{}
+2023-09-28 14:55:57,512 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\utils\request.py:248: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-09-28 14:55:57,529 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 14:55:57,552 - INFO - Telnet Password: 5c330d24babfe414
+2023-09-28 14:55:57,697 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\extensions\feedexport.py:398: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2023-09-28 14:55:57,712 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 14:55:57,845 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 14:55:57,845 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 14:55:57,845 - INFO - Enabled item pipelines:
+[]
+2023-09-28 14:55:57,845 - INFO - Spider opened
+2023-09-28 14:55:57,861 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 14:55:57,861 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-09-28 14:55:59,111 - DEBUG - Crawled (200) <GET https://www.ogol.com.br/equipa.php?id=2256> (referer: None)
+2023-09-28 14:55:59,227 - INFO - Starting the ogol_spider
+2023-09-28 14:55:59,245 - INFO - Season Matches Data was successfully scraped
+2023-09-28 14:55:59,261 - INFO - Competition data was successfully scraped
+2023-09-28 14:55:59,261 - INFO - Current Matches Data was successfully scraped!
+2023-09-28 14:55:59,261 - DEBUG - Scraped from <200 https://www.ogol.com.br/equipa.php?id=2256>
+{'season_year': '2023', 'season_matches_data': [{'competition': 'Copa Sul-Americana', 'matches_played': '10', 'wins': '7', 'draws': '1', 'losses': '2', 'goals': '17-3'}, {'competition': 'Brasileirão', 'matches_played': '24', 'wins': '8', 'draws': '7', 'losses': '9', 'goals': '29-26'}, {'competition': 'Copa do Brasil', 'matches_played': '10', 'wins': '6', 'draws': '2', 'losses': '2', 'goals': '12-7'}, {'competition': 'Campeonato Paulista ', 'matches_played': '13', 'wins': '7', 'draws': '3', 'losses': '3', 'goals': '23-10'}, {'competition': 'Total', 'matches_played': '57', 'wins': '28', 'draws': '13', 'losses': '16', 'goals': '81-46'}], 'competition_data': [{'competition': 'Campeonato Paulista 2023', 'Position': 'QF'}, {'competition': 'Campeonato Brasileiro 2023', 'Position': '10º'}, {'competition': 'Copa do Brasil 2023', 'Position': '1.º'}, {'competition': 'Copa Sul-Americana 2023', 'Position': 'QF'}], 'current_matches_data': [{'date': '18/10', 'hour': '20:00', 'league': 'D1', 'home_team': 'Goiás', 'score_vs': 'vs', 'away_team': 'São Paulo'}, {'date': '07/10', 'hour': '18:30', 'league': 'D1', 'home_team': 'Vasco', 'score_vs': 'vs', 'away_team': 'São Paulo'}, {'date': '30/09', 'hour': '18:30', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': 'vs', 'away_team': 'Corinthians'}, {'date': '27/09', 'hour': '19:00', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': '2-1', 'away_team': 'Coritiba'}, {'date': '24/09', 'hour': '16:00', 'league': 'CB', 'home_team': 'São Paulo', 'score_vs': '1-1', 'away_team': 'Flamengo'}, {'date': '20/09', 'hour': '21:30', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': '1-2', 'away_team': 'Fortaleza'}]}
+2023-09-28 14:55:59,261 - INFO - ogol_spider successfully executed, data scraped!
+2023-09-28 14:55:59,261 - INFO - Closing spider (finished)
+2023-09-28 14:55:59,261 - INFO - Stored json feed (1 items) in: src/web_scraper/real_time_data_scraper/team_data.json
+2023-09-28 14:55:59,261 - INFO - Dumping Scrapy stats:
+{'downloader/request_bytes': 234,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 47305,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.400567,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 9, 28, 17, 55, 59, 261932),
+ 'httpcompression/response_bytes': 364149,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 16,
+ 'log_count/WARNING': 2,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 9, 28, 17, 55, 57, 861365)}
+2023-09-28 14:55:59,261 - INFO - Spider closed (finished)
+2023-09-28 14:55:59,278 - INFO - Jsons successfully combined
+2023-09-28 14:55:59,309 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 14:55:59,309 - INFO - The report was successfully generated
+2023-09-28 14:59:13,050 - INFO - Received SIGINT, shutting down gracefully. Send again to force 
+2023-09-28 15:01:00,304 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,304 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,304 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:00,304 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,304 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:00,304 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:00,731 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,732 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:00,733 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,733 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:00,737 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,737 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:00,757 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:01:00,757 - DEBUG - No authority access information, soft fail
+2023-09-28 15:01:01,549 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 15:01:01,549 - INFO - Connected to the database
+2023-09-28 15:01:01,683 - WARNING - Document not found.
+2023-09-28 15:01:01,683 - INFO - Starting the ogol_spider runner
+2023-09-28 15:01:01,686 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 15:01:01,686 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 15:01:01,686 - INFO - Enabled addons:
+[]
+2023-09-28 15:01:01,686 - INFO - Overridden settings:
+{}
+2023-09-28 15:01:01,686 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 15:01:01,686 - INFO - Telnet Password: 63f81389b4ed0618
+2023-09-28 15:01:01,686 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 15:01:01,697 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 15:01:01,698 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 15:01:01,699 - INFO - Enabled item pipelines:
+[]
+2023-09-28 15:01:01,699 - INFO - Spider opened
+2023-09-28 15:01:01,700 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 15:01:01,700 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-09-28 15:01:01,700 - ERROR - An error occurred trying to run the ogol_spider: 
+2023-09-28 15:01:01,700 - ERROR - Error to unify the jsons: 'NoneType' object has no attribute 'items'
+2023-09-28 15:01:01,716 - ERROR - Error to process the json data and render the HTML: 'NoneType' object is not subscriptable
+2023-09-28 15:01:01,716 - INFO - The report was successfully generated
+2023-09-28 15:03:30,550 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,550 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,551 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:30,551 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:30,553 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,553 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:30,984 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,986 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:30,992 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,992 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,992 - DEBUG - Peer did not staple an OCSP response
+2023-09-28 15:03:30,993 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:30,993 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:30,993 - DEBUG - No authority access information, soft fail
+2023-09-28 15:03:31,815 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 15:03:31,815 - INFO - Connected to the database
+2023-09-28 15:03:31,959 - INFO - Starting the ogol_spider runner
+2023-09-28 15:03:31,961 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 15:03:31,961 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 15:03:31,962 - INFO - Enabled addons:
+[]
+2023-09-28 15:03:31,963 - INFO - Overridden settings:
+{}
+2023-09-28 15:03:31,963 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 15:03:31,964 - INFO - Telnet Password: 64824428a204f531
+2023-09-28 15:03:31,966 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 15:03:31,968 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 15:03:31,970 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 15:03:31,970 - INFO - Enabled item pipelines:
+[]
+2023-09-28 15:03:31,971 - INFO - Spider opened
+2023-09-28 15:03:31,971 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 15:03:31,971 - INFO - Telnet console listening on 127.0.0.1:6024
+2023-09-28 15:03:31,973 - ERROR - An error occurred trying to run the ogol_spider: 
+2023-09-28 15:03:31,980 - INFO - Jsons successfully combined
+2023-09-28 15:03:32,017 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 15:03:32,017 - INFO - The report was successfully generated
+2023-09-28 15:03:37,855 - INFO - Received SIGINT, shutting down gracefully. Send again to force 
+2023-09-28 15:03:39,832 - INFO - Received SIGINT twice, forcing unclean shutdown
+2023-09-28 15:05:09,519 - INFO - The file 'src/web_scraper/real_time_data_scraper/team_data.json' has been successfully deleted.
+2023-09-28 15:05:19,052 - INFO - Pinged your deployment. You successfully connected to MongoDB!
+2023-09-28 15:05:19,053 - INFO - Connected to the database
+2023-09-28 15:05:19,187 - INFO - Starting the ogol_spider runner
+2023-09-28 15:05:19,189 - INFO - Scrapy 2.10.1 started (bot: scrapybot)
+2023-09-28 15:05:19,224 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform Windows-10-10.0.22621-SP0
+2023-09-28 15:05:19,234 - INFO - Enabled addons:
+[]
+2023-09-28 15:05:19,235 - INFO - Overridden settings:
+{}
+2023-09-28 15:05:19,253 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\utils\request.py:248: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-09-28 15:05:19,261 - DEBUG - Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-28 15:05:19,295 - INFO - Telnet Password: 8e6eb4d1a4ce4b9e
+2023-09-28 15:05:19,457 - WARNING - C:\Users\lucas.belo\OneDrive - CIAL Dun & Bradstreet\Documentos\Python\personal\football_report\venv\venv\Lib\site-packages\scrapy\extensions\feedexport.py:398: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2023-09-28 15:05:19,469 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-09-28 15:05:19,626 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-28 15:05:19,646 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-28 15:05:19,651 - INFO - Enabled item pipelines:
+[]
+2023-09-28 15:05:19,652 - INFO - Spider opened
+2023-09-28 15:05:19,670 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-28 15:05:19,676 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-09-28 15:05:21,206 - DEBUG - Crawled (200) <GET https://www.ogol.com.br/equipa.php?id=2234> (referer: None)
+2023-09-28 15:05:21,312 - INFO - Starting the ogol_spider
+2023-09-28 15:05:21,339 - INFO - Season Matches Data was successfully scraped
+2023-09-28 15:05:21,353 - INFO - Competition data was successfully scraped
+2023-09-28 15:05:21,360 - INFO - Current Matches Data was successfully scraped!
+2023-09-28 15:05:21,360 - DEBUG - Scraped from <200 https://www.ogol.com.br/equipa.php?id=2234>
+{'season_year': '2023', 'season_matches_data': [{'competition': 'Copa Sul-Americana', 'matches_played': '7', 'wins': '4', 'draws': '2', 'losses': '1', 'goals': '7-4'}, {'competition': 'Libertadores', 'matches_played': '6', 'wins': '2', 'draws': '1', 'losses': '3', 'goals': '7-6'}, {'competition': 'Brasileirão', 'matches_played': '24', 'wins': '7', 'draws': '9', 'losses': '8', 'goals': '28-29'}, {'competition': 'Copa do Brasil', 'matches_played': '8', 'wins': '4', 'draws': '0', 'losses': '4', 'goals': '9-10'}, {'competition': 'Campeonato Paulista ', 'matches_played': '13', 'wins': '6', 'draws': '5', 'losses': '2', 'goals': '20-11'}, {'competition': 'Total', 'matches_played': '58', 'wins': '23', 'draws': '17', 'losses': '18', 'goals': '71-60'}], 'competition_data': [{'competition': 'Campeonato Paulista 2023', 'Position': 'QF'}, {'competition': 'Campeonato Brasileiro 2023', 'Position': '11º'}, {'competition': 'Copa do Brasil 2023', 'Position': 'SF'}, {'competition': 'Copa Sul-Americana 2023', 'Position': 'SF'}, {'competition': 'Copa Libertadores 2023', 'Position': 'FG'}], 'current_matches_data': [{'date': '07/10', 'hour': '21:00', 'league': 'D1', 'home_team': 'Corinthians', 'score_vs': 'vs', 'away_team': 'Flamengo'}, {'date': '03/10', 'hour': '21:30', 'league': 'CS', 'home_team': 'Fortaleza', 'score_vs': 'vs', 'away_team': 'Corinthians'}, {'date': '30/09', 'hour': '18:30', 'league': 'D1', 'home_team': 'São Paulo', 'score_vs': 'vs', 'away_team': 'Corinthians'}, {'date': '26/09', 'hour': '21:30', 'league': 'CS', 'home_team': 'Corinthians', 'score_vs': '1-1', 'away_team': 'Fortaleza'}, {'date': '22/09', 'hour': '20:00', 'league': 'D1', 'home_team': 'Corinthians', 'score_vs': '1-0', 'away_team': 'Botafogo'}, {'date': '18/09', 'hour': '21:00', 'league': 'D1', 'home_team': 'Corinthians', 'score_vs': '4-4', 'away_team': 'Grêmio'}]}
+2023-09-28 15:05:21,360 - INFO - ogol_spider successfully executed, data scraped!
+2023-09-28 15:05:21,360 - INFO - Closing spider (finished)
+2023-09-28 15:05:21,360 - INFO - Stored json feed (1 items) in: src/web_scraper/real_time_data_scraper/team_data.json
+2023-09-28 15:05:21,360 - INFO - Dumping Scrapy stats:
+{'downloader/request_bytes': 234,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 47348,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.690201,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 9, 28, 18, 5, 21, 360901),
+ 'httpcompression/response_bytes': 370798,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 16,
+ 'log_count/WARNING': 2,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 9, 28, 18, 5, 19, 670700)}
+2023-09-28 15:05:21,360 - INFO - Spider closed (finished)
+2023-09-28 15:05:21,376 - INFO - Jsons successfully combined
+2023-09-28 15:05:21,395 - INFO - Json data successfully processed and HTML rendered
+2023-09-28 15:05:21,396 - INFO - The report was successfully generated
+2023-09-28 15:07:09,371 - INFO - Received SIGINT, shutting down gracefully. Send again to force 
