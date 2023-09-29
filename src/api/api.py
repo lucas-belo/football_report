@@ -20,8 +20,6 @@ ui_folder = Jinja2Templates(
 )
 
 
-test  =0
-
 class Item(BaseModel):
     country: str
     league: str
@@ -34,8 +32,8 @@ async def root():
 
 
 @app.get("/request", response_class=HTMLResponse)
-async def form(request: Request):
-    context = {"title": "Minha Página", "content": "Bem-vindo à minha página."}
+async def request_page(request: Request):
+    context = {"title": "Team report request", "content": "Page"}
     return ui_folder.TemplateResponse("index.html", {"request": request, "context": context})
 
 
@@ -51,16 +49,10 @@ async def generate_report_endpoint(
     item = Item(country=country, league=league, team=team)
 
     run_report_generator(item.country, item.league, item.team)
-    context = {"title": "Minha Página", "content": "Bem-vindo à minha página."}
+    context = {"title": f"{item.team}", "content": "Report"}
     return report_folder.TemplateResponse("report.html", {"request": request, "context": context})
-
-# @app.get("/report", response_class=HTMLResponse)
-# async def generate_report_endpoint(item: Item, bt: BackgroundTasks):
-#     run_report_generator(item.country, item.league, item.team)
-#     report = report_folder.TemplateResponse("report.html", {"item": item})
-#     return report
 
 
 @app.get("/team_json")
-async def generate_report_endpoint(item: Item, bt: BackgroundTasks):
+async def generate_json_endpoint(item: Item, bt: BackgroundTasks):
     return run_report_generator(item.country, item.league, item.team)
