@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Select the country, league and team</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Times FIFA</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style_ui.css') }}">
 </head>
 <body>
-    <h1>Select the country, league and team</h1>
-    <form id="reportForm">
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country"><br><br>
-
-        <label for="league">League:</label>
-        <input type="text" id="league" name="league"><br><br>
-
-        <label for="team">Team:</label>
-        <input type="text" id="team" name="team"><br><br>
-
-        <input type="submit" value="Generate Report">
-    </form>
-<script src="{{ url_for('static', path='/report_requester.js') }}"></script>
+    <header>
+        <h1>Selecione um time para solicitar o relatório</h1>
+    </header>
+    <div class="container">
+        <div class="select-container">
+            <label for="country">País:</label>
+            <select id="country">
+                <option value="brazil_teams">Brazil</option>
+                <option value="spain">Spain</option>
+                <!-- Adicione mais países aqui -->
+            </select>
+        </div>
+        <div class="select-container">
+            <label for="league">Liga:</label>
+            <select id="league">
+                <!-- Opções de liga serão preenchidas dinamicamente com JavaScript -->
+            </select>
+        </div>
+        <div class="select-container">
+            <label for="team">Time:</label>
+            <select id="team">
+                <!-- Opções de time serão preenchidas dinamicamente com JavaScript -->
+            </select>
+        </div>
+        <button id="generate-report">Gerar Relatório</button>
+    </div>
+    <script src="{{ url_for('static', path='/report_requester.js') }}"></script>
 </body>
 </html>

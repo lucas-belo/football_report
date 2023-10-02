@@ -4,7 +4,7 @@ from datetime import datetime
 from path import project_folder
 
 todays_date_for_files = datetime.now().strftime("%d_%m_%Y")
-
+    
 
 def setup_logging():
     log_directory = f"{project_folder}/logs/log_files"

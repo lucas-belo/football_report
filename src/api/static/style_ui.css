@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0077b6;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 30%;
+    padding: 10px;
+}
+
+#generate-report {
+    background-color: #0077b6; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Removendo a borda padrão do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
+}
+
+/* Estilo hover para o botão */
+#generate-report:hover {
+    background-color: #005577; /* Cor de fundo do botão ao passar o mouse */
+}
