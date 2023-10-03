@@ -39,8 +39,8 @@ async def request_page(request: Request):
 
 @app.get("/report", response_class=HTMLResponse)
 async def generate_report_endpoint(
-        request: Request,
         bt: BackgroundTasks,
+        request: Request,
         country: str = Query(...),
         league: str = Query(...),
         team: str = Query(...),

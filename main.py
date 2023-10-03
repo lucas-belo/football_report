@@ -5,20 +5,19 @@ from src.data_processing.json_unifier import json_formatter
 from src.database.query import get_document
 from src.web_scraper.real_time_data_scraper.spider_run import run_spider_and_get_result, delete_file
 from logs.logs_setup import successfully_process_log
+from path import project_folder
 
 
 def run_report_generator(country, league, team):
+    scraper_json = f'{project_folder}/src/web_scraper/real_time_data_scraper/team_data.json'
     # Query database
-
     document = get_document(country, league, team)
 
     # Run Scraper
-    delete_file('src/web_scraper/real_time_data_scraper/team_data.json')
-
+    delete_file(scraper_json)
     run_spider_and_get_result(team)
 
     # Get scraper json
-
     scraper_json_path = 'src/web_scraper/real_time_data_scraper/team_data.json'
 
     with open(scraper_json_path, 'r') as file:
@@ -38,6 +37,9 @@ def run_report_generator(country, league, team):
 
 
 if __name__ == "__main__":
-    run_report_generator("brazil_teams", "serie_a", "São Paulo Futebol Clube")
+    teams = ["Sport Club Corinthians Paulista", "São Paulo Futebol Clube"]
+
+    for team in teams:
+        run_report_generator("brazil_teams", "serie_a", team)
 
 
