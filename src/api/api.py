@@ -9,7 +9,7 @@ from path import project_folder
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="src/api/static"), name="static")
+app.mount("/static", StaticFiles(directory=f"{project_folder}/src/api/static"), name="static")
 
 report_folder = Jinja2Templates(
     directory=f"{project_folder}/src/view_pages/report"

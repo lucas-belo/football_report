@@ -50,7 +50,6 @@ generateReportButton.addEventListener('click', function() {
     const selectedTeam = teamSelect.value;
 
     const reportText = `País: ${selectedCountry}, Liga: ${selectedLeague}, Time: ${selectedTeam}`;
-    alert(reportText);
 
     const url = `/report?country=${encodeURIComponent(selectedCountry)}&league=${encodeURIComponent(selectedLeague)}&team=${encodeURIComponent(selectedTeam)}`;
     window.location.href = url;

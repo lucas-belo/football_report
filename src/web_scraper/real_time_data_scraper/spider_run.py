@@ -43,6 +43,8 @@ class RunSpider:
             process.crawl(OgolSpiderSpider, team_name=team_name)
             process.start()
 
+            process.join()
+
         except Exception as e:
             print(f"An error occurred trying to run the ogol_spider: {e}")
             logging.error(f"An error occurred trying to run the ogol_spider: {e}")

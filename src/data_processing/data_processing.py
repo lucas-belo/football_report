@@ -38,7 +38,8 @@ def data_processing(json, template_html_file):
             season_year=json["season_year"],
             season_matches_data=json["season_matches_data"],
             competition_data=json["competition_data"],
-            current_matches_data=json["current_matches_data"]
+            current_matches_data=json["current_matches_data"],
+            url="{{ url_for('static', path='/style.css') }}"
         )
 
         with open("src/view_pages/report/report.html", "w", encoding="utf-8") as output_file:
