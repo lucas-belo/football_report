@@ -26,12 +26,7 @@ class Item(BaseModel):
     team: str
 
 
-@app.get("/")
-async def root():
-    return {"Usage": "go to /docs"}
-
-
-@app.get("/request", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 async def request_page(request: Request):
     context = {"title": "Team report request", "content": "Page"}
     return ui_folder.TemplateResponse("index.html", {"request": request, "context": context})

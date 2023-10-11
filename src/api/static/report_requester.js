@@ -1,8 +1,7 @@
 const leaguesByCountry = {
-    brazil_teams: ["serie_a", "Brasileirao Serie B"],
+    brazil_teams: ["serie_a", "brasileiraoserieb"],
     spain: ["laliga", "segundadivision"]
 };
-
 
 const teamsByLeague = {
     serie_a: ["Sport Club Corinthians Paulista", "São Paulo Futebol Clube", "Grêmio Foot-Ball Porto Alegrense"],
@@ -22,6 +21,7 @@ function populateLeagues() {
         option.textContent = league;
         leagueSelect.appendChild(option);
     });
+    populateTeams(); // Chame populateTeams após preencher as ligas
 }
 
 function populateTeams() {
@@ -49,10 +49,11 @@ generateReportButton.addEventListener('click', function() {
     const selectedLeague = leagueSelect.value;
     const selectedTeam = teamSelect.value;
 
-    const reportText = `País: ${selectedCountry}, Liga: ${selectedLeague}, Time: ${selectedTeam}`;
+    const reportText = `País:  ${selectedCountry}, Liga: ${selectedLeague}, Time: ${selectedTeam}`;
 
     const url = `/report?country=${encodeURIComponent(selectedCountry)}&league=${encodeURIComponent(selectedLeague)}&team=${encodeURIComponent(selectedTeam)}`;
     window.location.href = url;
 });
 
-populateLeagues();
+populateLeagues(); // Chame a função populateLeagues no carregamento da página
+populateTeams(); // Chame a função populateTeams no carregamento da página
