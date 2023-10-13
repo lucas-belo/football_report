@@ -1,8 +1,8 @@
 import logging
-
 from jinja2 import Template
 
 from logs.logs_setup import setup_logging
+from src.data_processing.utils.teams_crest_url import teams_crest_url
 
 setup_logging()
 
@@ -39,7 +39,8 @@ def data_processing(json, template_html_file):
             season_matches_data=json["season_matches_data"],
             competition_data=json["competition_data"],
             current_matches_data=json["current_matches_data"],
-            url="{{ url_for('static', path='/style.css') }}"
+            url="{{ url_for('static', path='/style.css') }}",
+            team_crest_url=teams_crest_url[json["name"]]
         )
 
         with open("src/view_pages/report/report.html", "w", encoding="utf-8") as output_file:

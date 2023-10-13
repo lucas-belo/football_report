@@ -1,4 +1,5 @@
 import json
+from pydash import get
 
 from src.data_processing.data_processing import data_processing
 from src.data_processing.json_unifier import json_formatter
@@ -23,7 +24,8 @@ def run_report_generator(country, league, team):
     with open(scraper_json_path, 'r') as file:
         data = json.load(file)
 
-    scraper_json = data[0]
+    scraper_json = get(data, "[0]", {"Real time data not found"})
+    # scraper_json = data[0]
 
     # Format jsons
 
