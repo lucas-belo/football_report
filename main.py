@@ -9,7 +9,7 @@ from logs.logs_setup import successfully_process_log
 from path import project_folder
 
 
-def run_report_generator(country, league, team):
+def run_report_generator(country: str, league: str, team: str) -> any:
     scraper_json = f'{project_folder}/src/web_scraper/real_time_data_scraper/team_data.json'
     # Query database
     document = get_document(country, league, team)
