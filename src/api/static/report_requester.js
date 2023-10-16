@@ -55,5 +55,5 @@ generateReportButton.addEventListener('click', function() {
     window.location.href = url;
 });
 
-populateLeagues(); // Chame a função populateLeagues no carregamento da página
-populateTeams(); // Chame a função populateTeams no carregamento da página
+populateLeagues();
+populateTeams();

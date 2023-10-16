@@ -57,4 +57,5 @@ generateReportButton.addEventListener('click', function() {
     window.location.href = url;
 });
 
+
 populateLeagues();
