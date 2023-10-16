@@ -14,7 +14,12 @@ from logs.logs_setup import setup_logging
 setup_logging()
 
 
-def delete_file(file_name):
+def delete_file(file_name: str) -> None:
+    """
+    Delete the previous scraped data, stored in the json file
+
+    :param file_name: path to the json file (team_data.json)
+    """
     try:
         with open(file_name, "w"):
             pass
@@ -28,7 +33,13 @@ def delete_file(file_name):
         logging.error(f"An error occurred while deleting the file '{file_name}': {str(e)}")
 
 
-def run_spider_and_get_result(team_name):
+def run_spider_and_get_result(team_name: str) -> None:
+    """
+    runs the web scraper, getting the real time data to the requested report.
+
+    :param team_name: the name of the requested team to run the webscraper
+    and get the real time data
+    """
     try:
         print("Starting the ogol_spider runner")
         logging.info("Starting the ogol_spider runner")
@@ -46,7 +57,6 @@ def run_spider_and_get_result(team_name):
         from twisted.internet import reactor
         from twisted.internet import default
         default.install()
-
 
     except Exception as e:
         print(f"An error occurred trying to run the ogol_spider: {e}")
