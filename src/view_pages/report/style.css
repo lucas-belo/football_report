@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 16px;
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
@@ -27,8 +27,8 @@ body {
 }
 
 .section-divider {
-    border-top: 2px solid #CED2DC; /* Defina a cor e espessura da linha conforme desejado */
-    margin-bottom: 20px; /* Ajuste o espaço após a divisória conforme necessário */
+    border-top: 2px solid #CED2DC;
+    margin-bottom: 20px;
 }
 
 .team-logo {
@@ -65,7 +65,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Estilizando a seção de títulos */
+/* seção de títulos */
 .section {
     background-color: #f2f2f2;
     padding: 20px;
@@ -79,7 +79,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Estilizando a lista de títulos */
+/* lista de títulos */
 .data-list {
     list-style: none;
     padding: 0;
@@ -92,16 +92,16 @@ h2 {
 }
 
 .data-list li:first-child {
-    margin-top: 15px; /* Ajuste o valor conforme necessário */
+    margin-top: 15px;
 }
 
-/* Estilizando as categorias de títulos */
+/* categorias de títulos */
 .data-list strong {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-/* Estilizando os títulos individuais */
+/* títulos individuais */
 .data-list ul {
     list-style: disc;
     margin-left: 20px;

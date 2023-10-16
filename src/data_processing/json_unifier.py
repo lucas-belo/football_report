@@ -3,7 +3,13 @@ import logging
 from bson import ObjectId
 
 
-def json_formatter(json1, json2):
+def json_formatter(json1: any, json2: any) -> any:
+    """
+    Get the database json and the data scrapper json and unify it in an unique json
+    :param json1: database json
+    :param json2: scrapper json
+    :return: unified json
+    """
     try:
         json1 = {k: str(v) if isinstance(v, ObjectId) else v for k, v in json1.items()}
         json2 = {k: str(v) if isinstance(v, ObjectId) else v for k, v in json2.items()}

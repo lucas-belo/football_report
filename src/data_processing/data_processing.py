@@ -7,7 +7,14 @@ from src.data_processing.utils.teams_crest_url import teams_crest_url
 setup_logging()
 
 
-def data_processing(json, template_html_file):
+def data_processing(json: any, template_html_file: str) -> None:
+    """
+    Process JSON data and render an HTML report.
+
+    :param json: the completed json (database and scrapped data)
+    :param template_html_file: the report html template
+    :return: None. Just render the html and store it in the file report.html
+    """
     try:
         with open(template_html_file, "r", encoding="utf-8") as file:
             template_html = file.read()
