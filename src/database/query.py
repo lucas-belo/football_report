@@ -7,7 +7,16 @@ from logs.logs_setup import setup_logging
 setup_logging()
 
 
-def get_document(database_name, collection_name, name):
+def get_document(database_name: str, collection_name: str, name: str) -> any:
+    """
+    connect to the MongoDB and search for the requested document,
+    with the followings params:
+
+    :param database_name: country name
+    :param collection_name: league name
+    :param name: team name
+    :return: the json document stored in the database
+    """
     try:
         client = MongoDbManager.mongodb_connection()
         if client:
