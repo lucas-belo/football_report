@@ -1,13 +1,13 @@
 const leaguesByCountry = {
     brazil_teams: ["serie_a", "brasileiraoserieb"],
-    spain: ["laliga", "segundadivision"]
+    england_teams: ["premier_league", "efl_championship"]
 };
 
 const teamsByLeague = {
     serie_a: ["Sport Club Corinthians Paulista", "São Paulo Futebol Clube", "Grêmio Foot-Ball Porto Alegrense"],
     brasileiraoserieb: ["Vasco da Gama", "Cruzeiro", "Coritiba"],
-    laliga: ["Real Madrid", "Barcelona", "Atletico Madrid"],
-    segundadivision: ["Real Zaragoza", "Espanyol", "Mallorca"]
+    premier_league: ["Manchester City Football Club", "Manchester United Football Club", "Liverpool Football Club"],
+    efl_championship: ["Real Zaragoza", "Espanyol", "Mallorca"]
 };
 
 function populateLeagues() {
@@ -21,7 +21,7 @@ function populateLeagues() {
         option.textContent = league;
         leagueSelect.appendChild(option);
     });
-    populateTeams(); // Chame populateTeams após preencher as ligas
+    populateTeams();
 }
 
 function populateTeams() {
@@ -44,7 +44,7 @@ const generateReportButton = document.getElementById('generate-report');
 countrySelect.addEventListener('change', populateLeagues);
 leagueSelect.addEventListener('change', populateTeams);
 
-generateReportButton.addEventListener('click', function() {
+generateReportButton.addEventListener('click', function () {
     const selectedCountry = countrySelect.value;
     const selectedLeague = leagueSelect.value;
     const selectedTeam = teamSelect.value;

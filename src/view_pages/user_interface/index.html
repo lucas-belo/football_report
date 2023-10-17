@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://footballreportimgs.s3.us-east-2.amazonaws.com/home_page_icon.png" >
+    <link rel="icon" href="https://footballreportimgs.s3.us-east-2.amazonaws.com/home_page_icon.png">
     <title>Team report generator</title>
     <link rel="stylesheet" href="{{ url_for('static', path='/style_ui.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Selecione um time para solicitar o relatório</h1>
-    </header>
-    <div class="container">
-        <div class="select-container">
-            <label for="country">País:</label>
-            <select id="country">
-                <option value="brazil_teams">Brazil</option>
-                <option value="spain">Spain</option>
-            </select>
-        </div>
-        <div class="select-container">
-            <label for="league">Liga:</label>
-            <select id="league">
-            </select>
-        </div>
-        <div class="select-container">
-            <label for="team">Time:</label>
-            <select id="team">
-            </select>
-        </div>
-        <button id="generate-report">Gerar Relatório</button>
+<header>
+    <h1>Selecione um time para solicitar o relatório</h1>
+</header>
+<div class="container">
+    <div class="select-container">
+        <label for="country">País:</label>
+        <select id="country">
+            <option value="brazil_teams">Brazil</option>
+            <option value="england_teams">England</option>
+        </select>
     </div>
-    <script src="{{ url_for('static', path='/report_requester.js') }}"></script>
+    <div class="select-container">
+        <label for="league">Liga:</label>
+        <select id="league">
+        </select>
+    </div>
+    <div class="select-container">
+        <label for="team">Time:</label>
+        <select id="team">
+        </select>
+    </div>
+    <button id="generate-report">Gerar Relatório</button>
+</div>
+<script src="{{ url_for('static', path='/report_requester.js') }}"></script>
 </body>
 </html>
