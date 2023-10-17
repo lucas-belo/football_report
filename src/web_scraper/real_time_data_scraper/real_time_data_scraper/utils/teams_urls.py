@@ -80,5 +80,6 @@ teams_urls = {
     "Vitória": "https://www.ogol.com.br/equipa.php?id=2259",
     "Volta Redonda": "https://www.ogol.com.br/equipa.php?id=3538",
     "XV de Piracicaba": "https://www.ogol.com.br/equipa.php?id=8229",
-    "Ypiranga-RS": "https://www.ogol.com.br/equipa.php?id=3541"
+    "Ypiranga-RS": "https://www.ogol.com.br/equipa.php?id=3541",
+    "Manchester City Football Club": "https://www.ogol.com.br/equipe/manchester-city"
 }

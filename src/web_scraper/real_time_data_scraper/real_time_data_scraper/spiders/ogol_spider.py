@@ -1,15 +1,14 @@
-import scrapy
 import logging
 
-from ..utils import teams_urls
+import scrapy
 
+from logs.logs_setup import setup_logging
 from .ogol_modules import (
     season_summary,
     competitions,
     previous_and_next_games
-                           )
-
-from logs.logs_setup import setup_logging
+)
+from ..utils import teams_urls
 
 setup_logging()
 
@@ -34,14 +33,11 @@ class OgolSpiderSpider(scrapy.Spider):
         logging.info("Starting the ogol_spider")
 
         try:
-            season_year = response.xpath('//*[@id="page_rightbar"]/div[1]/h3/text()').get()
+            season_year = response.xpath('//*[@id="page_main"]/div[1]/h2/span/text()').get()
 
             if season_year is not None:
-                if season_year.isnumeric():
-                    pass
-                else:
-                    season_year = "Temporada atual não encontrada"
-
+                season_year = season_year.replace("(", "").replace(")", "")
+                pass
             else:
                 season_year = "Temporada atual não encontrada"
 
