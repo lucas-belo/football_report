@@ -10,7 +10,8 @@ Real-time data scraping using Scrapy.
 Jinja2 templating for integrating Python and front-end HTML/CSS.
 Customizable reports for each selected team.
 Displays information such as team history, titles, recent games, upcoming matches, league standings, and squad details.
-Project Structure
+
+# Project Structure
 The project consists of several components:
 
 # Database: 
