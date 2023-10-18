@@ -10,7 +10,7 @@ from src.database.query import get_document
 from src.web_scraper.real_time_data_scraper.spider_run import run_spider_and_get_result, delete_file
 
 
-def run_report_generator(country: str, league: str, team: str) -> any:
+def run_report_generator(country: str, league: str, team: str) -> dict[str, str | int | list[str]]:
     """
     This main function orchestrates all the system steps:
      - Query the database
@@ -39,8 +39,7 @@ def run_report_generator(country: str, league: str, team: str) -> any:
     with open(scraper_json_path, 'r') as file:
         data = json.load(file)
 
-    scraper_json = get(data, "[0]", {"Real time data not found"})
-    # scraper_json = data[0]
+    scraper_json = get(data, "0", {"Real time data not found"})
 
     # Format jsons
 

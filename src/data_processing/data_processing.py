@@ -1,4 +1,5 @@
 import logging
+
 from jinja2 import Template
 
 from logs.logs_setup import setup_logging
@@ -57,6 +58,8 @@ def data_processing(json: any, template_html_file: str) -> None:
         logging.info("Json data successfully processed and HTML rendered")
 
     except Exception as e:
+        with open("src/view_pages/report/report.html", "w", encoding="utf-8") as output_file:
+            output_file.write("Error to process the report, please, reload the page...")
+
         print(f"Error to process the json data and render the HTML: {e}")
         logging.error(f"Error to process the json data and render the HTML: {e}")
-
