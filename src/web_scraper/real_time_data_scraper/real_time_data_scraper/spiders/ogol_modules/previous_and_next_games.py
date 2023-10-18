@@ -35,6 +35,8 @@ def previous_and_next_games(response):
                 away_team = row.xpath('.//td[7]/a/b/text()').get()
                 if away_team is None:
                     away_team = row.xpath('.//td[7]/div/div[2]/a/text()').get()
+                    if away_team is None:
+                        away_team = row.xpath('//*[@id="9574525"]/td[7]/div/div[2]/a/b/text()').get()
 
             stat = {
                 "date": date,
