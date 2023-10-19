@@ -7,7 +7,7 @@ from logs.logs_setup import setup_logging
 setup_logging()
 
 
-def previous_and_next_games(response: Response) -> dict:
+def previous_and_next_games(response: Response) -> list[dict]:
     """
     This function receives the response from the main spider class request and get the previous and next matches data
     (the 3 previous and 3 next matches of the team)
@@ -59,27 +59,27 @@ def previous_and_next_games(response: Response) -> dict:
             current_matches_data.append(stat)
 
         if not current_matches_data:
-            current_matches_data = {
+            current_matches_data = [{
                 "date": "Sorry, data not available",
                 "hour": "Sorry, data not available",
                 "league": "Sorry, data not available",
                 "home_team": "Sorry, data not available",
                 "score_vs": "Sorry, data not available",
                 "away_team": "Sorry, data not available"
-            }
+            }]
 
         print("Current Matches Data was successfully scraped!")
         logging.info("Current Matches Data was successfully scraped!")
         return current_matches_data
     except Exception as e:
-        current_matches_data = {
+        current_matches_data = [{
             "date": "Sorry, data not available",
             "hour": "Sorry, data not available",
             "league": "Sorry, data not available",
             "home_team": "Sorry, data not available",
             "score_vs": "Sorry, data not available",
             "away_team": "Sorry, data not available"
-        }
+        }]
         print(f"Error to get the Current Matches Data: {e}")
         logging.error(f"Error to get the Current Matches Data: {e}")
         return current_matches_data

@@ -7,7 +7,7 @@ from logs.logs_setup import setup_logging
 setup_logging()
 
 
-def season_summary(response: Response) -> dict:
+def season_summary(response: Response) -> list[dict]:
     """
     This function receives the response from the main spider class request and get the current season matches data
     (the matches, wins, draws, loses, and goals in each championship)
@@ -44,28 +44,28 @@ def season_summary(response: Response) -> dict:
             matches_data.append(stat)
 
         if not matches_data:
-            matches_data = {
+            matches_data = [{
                 "competition": "Sorry, data not available",
                 "matches_played": "Sorry, data not available",
                 "wins": "Sorry, data not available",
                 "draws": "Sorry, data not available",
                 "losses": "Sorry, data not available",
                 "goals": "Sorry, data not available"
-            }
+            }]
 
         print("Season Matches Data was successfully scraped")
         logging.info("Season Matches Data was successfully scraped")
         return matches_data
 
     except Exception as e:
-        matches_data = {
+        matches_data = [{
             "competition": "Sorry, data not available",
             "matches_played": "Sorry, data not available",
             "wins": "Sorry, data not available",
             "draws": "Sorry, data not available",
             "losses": "Sorry, data not available",
             "goals": "Sorry, data not available"
-        }
+        }]
         print(f"Error to get season matches data: {e}")
         logging.error(f"Error to get season matches data: {e}")
         return matches_data
