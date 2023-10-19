@@ -58,12 +58,12 @@ def previous_and_next_games(response: Response) -> dict:
 
         if not current_matches_data:
             current_matches_data = {
-                "date": "Not found",
-                "hour": "Not found",
-                "league": "Not found",
-                "home_team": "Not found",
-                "score_vs": "Not found",
-                "away_team": "Not found"
+                "date": "Sorry, data not available",
+                "hour": "Sorry, data not available",
+                "league": "Sorry, data not available",
+                "home_team": "Sorry, data not available",
+                "score_vs": "Sorry, data not available",
+                "away_team": "Sorry, data not available"
             }
 
         print("Current Matches Data was successfully scraped!")
@@ -71,12 +71,12 @@ def previous_and_next_games(response: Response) -> dict:
         return current_matches_data
     except Exception as e:
         current_matches_data = {
-            "date": "Not found",
-            "hour": "Not found",
-            "league": "Not found",
-            "home_team": "Not found",
-            "score_vs": "Not found",
-            "away_team": "Not found"
+            "date": "Sorry, data not available",
+            "hour": "Sorry, data not available",
+            "league": "Sorry, data not available",
+            "home_team": "Sorry, data not available",
+            "score_vs": "Sorry, data not available",
+            "away_team": "Sorry, data not available"
         }
         print(f"Error to get the Current Matches Data: {e}")
         logging.error(f"Error to get the Current Matches Data: {e}")

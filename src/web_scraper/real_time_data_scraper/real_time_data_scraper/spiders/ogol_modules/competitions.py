@@ -42,14 +42,14 @@ def competitions(response: Response) -> dict:
 
             if not competition_data:
                 competition_data = {
-                    "competition": "Not found",
-                    "Position": "Not found"
+                    "competition": "Sorry, data not available",
+                    "Position": "Sorry, data not available"
                 }
 
         else:
             competition_data = {
-                "competition": "Not found",
-                "Position": "Not found"
+                "competition": "Sorry, data not available",
+                "Position": "Sorry, data not available"
             }
             return competition_data
 
@@ -59,8 +59,8 @@ def competitions(response: Response) -> dict:
 
     except Exception as e:
         competition_data = {
-            "competition": "Not found",
-            "Position": "Not found"
+            "competition": "Sorry, data not available",
+            "Position": "Sorry, data not available"
         }
         print(f"Error to get the competition data: {e}")
         logging.info(f"Error to get the competition data: {e}")
