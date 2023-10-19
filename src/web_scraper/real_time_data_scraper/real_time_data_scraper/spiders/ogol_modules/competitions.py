@@ -1,15 +1,15 @@
 import logging
 
-from scrapy.http import HtmlResponse
+from scrapy.http import Response
 
 from logs.logs_setup import setup_logging
 
 setup_logging()
 
 
-def competitions(response: HtmlResponse) -> list:
+def competitions(response: Response) -> dict:
     """
-    This function recive the response from the main spider class and get the competitions
+    This function receives the response from the main spider class request and get the competitions
     (the position in each championship that team is competing)
 
     :param response: the response from the ogol website
@@ -40,10 +40,16 @@ def competitions(response: HtmlResponse) -> list:
                 competition_data.append(stat)
 
             if not competition_data:
-                competition_data = "Os dados das competições desse time não foram encontrados..."
+                competition_data = {
+                    "competition": "Not found",
+                    "Position": "Not found"
+                }
 
         else:
-            competition_data = "Os dados das competições desse time não foram encontrados..."
+            competition_data = {
+                "competition": "Not found",
+                "Position": "Not found"
+            }
             return competition_data
 
         print("Competition data was successfully scraped")
@@ -51,7 +57,10 @@ def competitions(response: HtmlResponse) -> list:
         return competition_data
 
     except Exception as e:
-        competition_data = "Os dados das competições desse time não foram encontrados..."
+        competition_data = {
+            "competition": "Not found",
+            "Position": "Not found"
+        }
         print(f"Error to get the competition data: {e}")
         logging.info(f"Error to get the competition data: {e}")
         return competition_data
