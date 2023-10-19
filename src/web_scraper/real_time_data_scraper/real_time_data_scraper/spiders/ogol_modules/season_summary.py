@@ -8,6 +8,13 @@ setup_logging()
 
 
 def season_summary(response: Response) -> dict:
+    """
+    This function receives the response from the main spider class request and get the current season matches data
+    (the matches, wins, draws, loses, and goals in each championship)
+
+    :param response: the response from the ogol website
+    :return: the season matches summary data in a dict format
+    """
     try:
         table_rows = response.xpath(
             '//div[@id="entity_season"]/table/tbody/tr'

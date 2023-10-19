@@ -9,6 +9,8 @@ setup_logging()
 
 def previous_and_next_games(response: Response) -> dict:
     """
+    This function receives the response from the main spider class request and get the previous and next matches data
+    (the 3 previous and 3 next matches of the team)
 
     :param response: the response from the ogol website
     :return: the previous and next games data in a dict format
