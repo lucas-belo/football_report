@@ -1,13 +1,13 @@
 const leaguesByCountry = {
-    brazil_teams: ["serie_a", "brasileiraoserieb"],
+    brazil_teams: ["serie_a", "serie_b"],
     england_teams: ["premier_league", "efl_championship"]
 };
 
 const teamsByLeague = {
     serie_a: ["Sport Club Corinthians Paulista", "São Paulo Futebol Clube", "Grêmio Foot-Ball Porto Alegrense"],
-    brasileiraoserieb: ["Vasco da Gama", "Cruzeiro", "Coritiba"],
+    serie_b: ["Sport Club do Recife", "Guarani Futebol Clube", "Esporte Clube Vitória"],
     premier_league: ["Manchester City Football Club", "Manchester United Football Club", "Liverpool Football Club"],
-    efl_championship: ["Real Zaragoza", "Espanyol", "Mallorca"]
+    efl_championship: ["Leicester City Football Club", "Sunderland Association Football Club", "Cardiff City Football Club"]
 };
 
 function populateLeagues() {
