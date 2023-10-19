@@ -1,0 +1,31 @@
+[
+  {
+    "season_year": "Sorry, data not available",
+    "season_matches_data": [
+      {
+        "competition": "Sorry, data not available",
+        "matches_played": "Sorry, data not available",
+        "wins": "Sorry, data not available",
+        "draws": "Sorry, data not available",
+        "losses": "Sorry, data not available",
+        "goals": "Sorry, data not available"
+      }
+    ],
+    "competition_data": [
+      {
+        "competition": "Sorry, data not available",
+        "Position": "Sorry, data not available"
+      }
+    ],
+    "current_matches_data": [
+      {
+        "date": "Sorry, data not available",
+        "hour": "Sorry, data not available",
+        "league": "Sorry, data not available",
+        "home_team": "Sorry, data not available",
+        "score_vs": "Sorry, data not available",
+        "away_team": "Sorry, data not available"
+      }
+    ]
+  }
+]
