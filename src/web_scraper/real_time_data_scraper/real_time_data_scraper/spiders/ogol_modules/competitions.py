@@ -13,8 +13,9 @@ def competitions(response: Response) -> dict:
     (the position in each championship that team is competing)
 
     :param response: the response from the ogol website
-    :return: return the competition data in a list format
+    :return: return the competition data in a dict format
     """
+
     try:
         official_competitions_div = response.xpath('//div[@class="section" and text()="Competições Oficiais"]')
 

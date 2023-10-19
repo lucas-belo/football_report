@@ -1,11 +1,18 @@
 import logging
 
+from scrapy.http import Response
+
 from logs.logs_setup import setup_logging
 
 setup_logging()
 
 
-def previous_and_next_games(response):
+def previous_and_next_games(response: Response) -> dict:
+    """
+
+    :param response: the response from the ogol website
+    :return: the previous and next games data in a dict format
+    """
     try:
 
         table_rows = response.xpath('//div[@id="team_games"]/table/tbody/tr')
@@ -50,13 +57,27 @@ def previous_and_next_games(response):
             current_matches_data.append(stat)
 
         if not current_matches_data:
-            current_matches_data = "Os dados dos jogos anteriores e próximos desse time não foram encontrados..."
+            current_matches_data = {
+                "date": "Not found",
+                "hour": "Not found",
+                "league": "Not found",
+                "home_team": "Not found",
+                "score_vs": "Not found",
+                "away_team": "Not found"
+            }
 
         print("Current Matches Data was successfully scraped!")
         logging.info("Current Matches Data was successfully scraped!")
         return current_matches_data
     except Exception as e:
-        current_matches_data = "Os dados das partidas anteriores e próximas desse time não foram encontrados..."
+        current_matches_data = {
+            "date": "Not found",
+            "hour": "Not found",
+            "league": "Not found",
+            "home_team": "Not found",
+            "score_vs": "Not found",
+            "away_team": "Not found"
+        }
         print(f"Error to get the Current Matches Data: {e}")
         logging.error(f"Error to get the Current Matches Data: {e}")
         return current_matches_data
