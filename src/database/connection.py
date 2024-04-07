@@ -24,7 +24,7 @@ class MongoDbManager:
         :return: A connection to the MongoDB server
         """
         password = os.getenv('MONGODB_PWD')
-        uri = f"mongodb+srv://lhbelo:{password}@cluster0.rismkis.mongodb.net/?retryWrites=true&w=majority"
+        uri = f"mongodb+srv://lhbelo:{password}@cluster0.ya4gv31.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
         client = MongoClient(uri, server_api=ServerApi('1'))
         try:
             client.admin.command('ping')
