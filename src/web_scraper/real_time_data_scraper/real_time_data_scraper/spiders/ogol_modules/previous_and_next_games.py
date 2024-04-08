@@ -34,18 +34,18 @@ def previous_and_next_games(response: Response) -> list[dict]:
                     if home_team is None:
                         home_team = row.xpath('.//td[5]/div/div[1]/a/text()').get()
 
-            score_vs = row.xpath('.//td[6]/a/text()').get()
+            score_vs = row.xpath('.//td[7]/a/text()').get()
             if score_vs is None:
-                score_vs = f"{row.xpath('.//td[6]/a/div[12]/text()').get()} - Em andamento"
+                score_vs = f"{row.xpath('.//td[7]/a/div[12]/text()').get()} - Em andamento"
 
-            away_team = row.xpath('.//td[7]/a/text()').get()
+            away_team = row.xpath('.//td[9]/a/text()').get()
 
             if away_team is None:
-                away_team = row.xpath('.//td[7]/a/b/text()').get()
+                away_team = row.xpath('.//td[9]/a/b/text()').get()
                 if away_team is None:
-                    away_team = row.xpath('.//td[7]/div/div[2]/a/text()').get()
+                    away_team = row.xpath('.//td[9]/div/div[2]/a/text()').get()
                     if away_team is None:
-                        away_team = row.xpath('//*[@id="9574525"]/td[7]/div/div[2]/a/b/text()').get()
+                        away_team = row.xpath('//*[@id="9574525"]/td[9]/div/div[2]/a/b/text()').get()
 
             stat = {
                 "date": date,
